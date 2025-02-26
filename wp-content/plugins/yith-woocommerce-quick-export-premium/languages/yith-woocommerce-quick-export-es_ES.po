@@ -1,0 +1,368 @@
+# Translation of YITH WooCommerce Quick Export in Spanish (Spain)
+# This file is distributed under the same license as the YITH WooCommerce Quick Export package.
+msgid ""
+msgstr ""
+"Project-Id-Version: YITH WooCommerce Quick Export\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/yith-woocommerce-"
+"quick-export.premium\n"
+"POT-Creation-Date: 2021-03-05 15:25:31+00:00\n"
+"PO-Revision-Date: 2020-04-01 09:49:07+0000\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+
+#: init.php:43
+msgid ""
+"YITH WooCommerce Quick Export is enabled but not effective. It requires "
+"WooCommerce in order to work."
+msgstr ""
+"YITH WooCommerce Quick Export está activado pero no es efectivo. Requiere "
+"WooCommerce para funcionar."
+
+#: lib/class.yith-quick-export-dropbox.php:104
+msgid "Error: no Access Token."
+msgstr "Error: sin acceso a Token."
+
+#: lib/class.yith-quick-export-dropbox.php:133
+msgid "Error: unable to send file to Dropbox."
+msgstr "Error: no ha sido posible enviar el archivo a Dropbox."
+
+#: lib/class.yith-woocommerce-quick-export.php:199
+#: templates/admin/create-job.php:151
+msgid "Weekly"
+msgstr "Semanalmente"
+
+#: lib/class.yith-woocommerce-quick-export.php:204
+msgid "Monthly"
+msgstr "Mensualmente"
+
+#: lib/class.yith-woocommerce-quick-export.php:277
+msgid "Please enter a valid folder/path name"
+msgstr "Por favor, introduce un nombre de ruta/carpeta válido"
+
+#: lib/class.yith-woocommerce-quick-export.php:284
+msgid "Starting date must be earlier than ending date"
+msgstr "La fecha de comienzo debe ser anterior a la fecha de fin"
+
+#: lib/class.yith-woocommerce-quick-export.php:374
+msgid "Please enter a valid schedule time."
+msgstr "Por favor, introduce una hora válida de programación."
+
+#: lib/class.yith-woocommerce-quick-export.php:375
+msgid "Starting date must be earlier than/the same of ending date."
+msgstr "La fecha de comienzo debe ser anterior/igual a la fecha de fin."
+
+#: lib/class.ywqe-custom-types.php:87
+msgid ""
+"Authorize this plugin to access to your Dropbox space.<br/>All <b>new "
+"documents</b> will be sent to your Dropbox space as soon as they are created."
+"<br/>Copy and paste the authorization code here, as in %sthis short guide%s."
+msgstr ""
+"Autoriza a este plugin a acceder a tu espacio de Dropbox. <br/>Todos los "
+"<b>nuevos documentos</b> serán enviados a tu espacio de your Dropbox tan "
+"pronto como sean creados.<br/>Copia y pega el código de autorización aquí, "
+"como en esta %spequeña guía%s."
+
+#: lib/class.ywqe-custom-types.php:92
+msgid "Access Token"
+msgstr "Acceso a Token."
+
+#: lib/class.ywqe-custom-types.php:100
+msgid "Get new Access Token"
+msgstr "Obtener nuevo acceso a Token"
+
+#: lib/class.ywqe-export-job.php:217
+msgid "Export data"
+msgstr "Exportar datos"
+
+#: lib/class.ywqe-plugin-fw-loader.php:140
+msgid "General"
+msgstr "General"
+
+#: lib/class.ywqe-plugin-fw-loader.php:141
+msgid "Data Exportation"
+msgstr "Exportación de datos"
+
+#: lib/class.ywqe-plugin-fw-loader.php:142
+msgid "Schedule history"
+msgstr "Programar historial"
+
+#: lib/class.ywqe-plugin-fw-loader.php:145
+msgid "Premium Version"
+msgstr "Versión Premium"
+
+#: lib/class.ywqe-plugin-fw-loader.php:199
+msgid ""
+"YITH WooCommerce Quick Export is available in an outstanding PREMIUM version "
+"with many new options, discover it now."
+msgstr ""
+"YITH WooCommerce Quick Export está disponible en una espectacular versión "
+"PREMIUM con muchas nuevas opciones, descúbrela ahora."
+
+#: lib/class.ywqe-plugin-fw-loader.php:200
+msgid "Premium version"
+msgstr "Versión Pemium"
+
+#: lib/class.ywqe-plugin-fw-loader.php:207
+#: plugin-options/general-options.php:64
+msgid "YITH WooCommerce Quick Export"
+msgstr "YITH WooCommerce Quick Export"
+
+#: lib/class.ywqe-plugin-fw-loader.php:208
+msgid ""
+"In the YIT Plugins tab, you can find the YITH WooCommerce Quick Export "
+"options.<br> From this menu you can have access to all settings of the "
+"activated YITH plugins."
+msgstr ""
+"En la pestaña YITH Plugins, puedes encontrar las opciones de YITH "
+"WooCommerce Quick Export.<br> Desde este menú puedes tener acceso a todos "
+"los ajustes de los plugins YITH activados."
+
+#: plugin-options/general-options.php:17
+msgid "General Settings"
+msgstr "Ajustes Generales"
+
+#: plugin-options/general-options.php:23
+msgid "Path format"
+msgstr "Formato de ruta"
+
+#: plugin-options/general-options.php:26
+msgid ""
+"Set the path where you want to store the documents. Use {{year}}, {{month}}, "
+"{{day}} as placeholders. For example: \"Backup/{{year}}/{{month}}\" will "
+"create a paths like Backup/2015/05, Backup/2015/06 for invoices stored per "
+"year and month; alternatively, leave blank for storing files in the root "
+"folder"
+msgstr ""
+"Selecciona la ruta donde quieres almacenar los documentos. Usa {{year}}, "
+"{{month}}, {{day}} como marcadores de posición. Por ejemplo: \"Backup/"
+"{{year}}/{{month}}\" creará rutas como Backup/2015/05, Backup/2015/06 para "
+"facturas almacenadas por año y mes; alternativamente, déjalo en blanco para "
+"almacenar archivos en la carpeta raíz"
+
+#: plugin-options/general-options.php:34
+msgid "Filename format"
+msgstr "Formato de nombre de archivo"
+
+#: plugin-options/general-options.php:37
+msgid ""
+"Set filename format for invoice documents. Use {{year}}, {{month}}, {{day}}, "
+"{{hours}}, {{minutes}}, {{seconds}} as placeholders."
+msgstr ""
+"Establecer formato de nombre de archivo válido para los documentos de "
+"factura. Usa {{year}}, {{month}}, {{day}}, {{hours}}, {{minutes}}, "
+"{{seconds}} como marcadores de posición."
+
+#: plugin-options/general-options.php:45
+msgid "Send documents to Dropbox"
+msgstr "Enviar documentos a Dropbox"
+
+#: plugin-options/general-options.php:48
+msgid "Set automatic document backup to Dropbox."
+msgstr "Establecer copia de seguridad de documentos automática en Dropbox."
+
+#: plugin-options/general-options.php:61
+msgid "Upgrade to the PREMIUM VERSION"
+msgstr "Actualiza a la VERSIÓN PREMIUM"
+
+#: plugin-options/general-options.php:65
+msgid "Discover The Advanced Features"
+msgstr "Descubre las características avanzadas"
+
+#: plugin-options/general-options.php:66
+msgid ""
+"Upgrade to the PREMIUM VERSION of YITH WooCommerce Quick Export to benefit "
+"from all features!"
+msgstr ""
+"¡Actualiza a la VERSIÓN PREMIUM de YITH WooCommerce Quick Export para "
+"beneficiarte de todas las características!"
+
+#: plugin-options/general-options.php:70
+msgid ""
+"See YITH WooCommerce Quick Export plugin with full premium features in action"
+msgstr ""
+"Descubre cómo es YITH WooCommerce Quick Export con todas sus características "
+"premium en acción"
+
+#: plugin-options/general-options.php:72
+msgid "Get Support and Pro Features"
+msgstr "Consigue soporte y características premium"
+
+#: plugin-options/general-options.php:73
+msgid ""
+"By purchasing the premium version of the plugin, you will take advantage of "
+"the advanced features of the product and you will get one year of free "
+"updates and support through our platform available 24h/24."
+msgstr ""
+"Comprando la versión premium del plugin, podrás beneficiarte de las "
+"características avanzadas del producto y podrás acceder a un año de soporte "
+"y actualizaciones gratuitos a través de nuestra plataforma de soporte "
+"disponible 24h/24."
+
+#: templates/admin/create-job.php:2
+msgid "Create new scheduled job"
+msgstr "Crear nuevo trabajo programado"
+
+#: templates/admin/create-job.php:12 templates/admin/create-job.php:16
+#: templates/admin/create-job.php:25 templates/admin/create-job.php:33
+#: templates/admin/create-job.php:46
+msgid "Choose data to export"
+msgstr "Elegir datos que exportar"
+
+#: templates/admin/create-job.php:20
+msgid "Orders"
+msgstr "Pedidos"
+
+#: templates/admin/create-job.php:29
+msgid "Customers"
+msgstr "Clientes"
+
+#: templates/admin/create-job.php:37
+msgid "Coupons"
+msgstr "Cupones"
+
+#: templates/admin/create-job.php:50
+msgid "Gift Cards"
+msgstr "Tarjetas regalo"
+
+#: templates/admin/create-job.php:57
+msgid "Order status"
+msgstr "Estado de pedido"
+
+#: templates/admin/create-job.php:72
+msgid "Scheduled exportation"
+msgstr "Exportación programada"
+
+#: templates/admin/create-job.php:76
+msgid "Start exportation at specific date/time"
+msgstr "Establecer la exportación en una fecha/hora específica"
+
+#: templates/admin/create-job.php:85
+msgid "From"
+msgstr "Desde"
+
+#: templates/admin/create-job.php:92
+msgid ""
+"Choose the starting date. Leave blank to start from the first item found."
+msgstr ""
+"Elige una fecha de comienzo. Déjalo en blanco para empezar desde el primer "
+"elemento encontrado."
+
+#: templates/admin/create-job.php:98
+msgid "To"
+msgstr "Hasta"
+
+#: templates/admin/create-job.php:106
+msgid "Choose the ending date. Leave blank to end with the last item found."
+msgstr ""
+"Elegir fecha de finalización. Déjala en blanco para terminar en el último "
+"elemento encontrado."
+
+#: templates/admin/create-job.php:112
+msgid "Exportation job name"
+msgstr "Nombre de trabajo de exportración"
+
+#: templates/admin/create-job.php:118
+msgid "Set a univocal name for this exportation job"
+msgstr "Establecer un nombre univocal para este trabajo de exportación"
+
+#: templates/admin/create-job.php:125
+msgid "Export on"
+msgstr "Exportar el"
+
+#: templates/admin/create-job.php:136
+msgid "Choose when the exportation should start."
+msgstr "Elige cuándo debería empezar la exportación."
+
+#: templates/admin/create-job.php:142
+msgid "Recurrence"
+msgstr "Recurrencia"
+
+#: templates/admin/create-job.php:145
+msgid "None"
+msgstr "Ninguna"
+
+#: templates/admin/create-job.php:148
+msgid "Daily"
+msgstr "Diariamente"
+
+#: templates/admin/create-job.php:154
+msgid "Monthly (30 days)"
+msgstr "Mensualmente (30 días)"
+
+#: templates/admin/create-job.php:162
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: templates/admin/create-job.php:165
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: templates/admin/exportation-history.php:5
+msgid "Processed task list"
+msgstr "Lista de tareas procesadas"
+
+#: templates/admin/exportation-history.php:11
+msgid "Select bulk action"
+msgstr "Seleccionar una acción en bloque"
+
+#: templates/admin/exportation-history.php:13
+msgid "Bulk Actions"
+msgstr "Acciones en bloque"
+
+#: templates/admin/exportation-history.php:14
+msgid "Move to Bin"
+msgstr "Mover a la papelera"
+
+#: templates/admin/exportation-history.php:16
+msgid "Apply"
+msgstr "Aplicar"
+
+#: templates/admin/exportation-history.php:23 templates/admin/jobs-table.php:13
+msgid "ID"
+msgstr "ID"
+
+#: templates/admin/exportation-history.php:24 templates/admin/jobs-table.php:14
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/admin/exportation-history.php:25 templates/admin/jobs-table.php:15
+msgid "Exportation time"
+msgstr "Hora de exportación"
+
+#: templates/admin/exportation-history.php:45
+msgid "Download"
+msgstr "Descargar"
+
+#: templates/admin/exportation-history.php:48 templates/admin/jobs-table.php:40
+msgid "Delete"
+msgstr "Borrar"
+
+#: templates/admin/jobs-table.php:6
+msgid "Scheduled task list"
+msgstr "Lista de tareas programadas"
+
+#: templates/admin/jobs-table.php:8
+msgid "Add job"
+msgstr "Añadir trabajo"
+
+#: templates/admin/jobs-table.php:16
+msgid "Recurrency"
+msgstr "Recurrencia"
+
+#. Description of the plugin/theme
+msgid ""
+"<code><strong>YITH WooCommerce Quick Export</strong></code> allows you to "
+"export orders, customer details and coupons on the fly, or scheduling "
+"automatic backup processes and recurrences. <a href=\"https://yithemes.com/"
+"\" target=\"_blank\">Get more plugins for your e-commerce on <strong>YITH</"
+"strong></a>."
+msgstr ""
+"<code><strong>YITH WooCommerce Quick Export</strong></code> te permite "
+"exportar pedidos, detalles de clientes y cupones sobre la marcha o programar "
+"procesos de backup automáticos y recurrencias. <a href=\"https://yithemes."
+"com/\" target=\"_blank\">Obtén más plugins para tu comercio electrónico en "
+"<strong>YITH</strong></a>."

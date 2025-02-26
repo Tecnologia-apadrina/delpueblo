@@ -1,0 +1,363 @@
+# Translation of YITH WooCommerce Quick Export in Dutch
+# This file is distributed under the same license as the YITH WooCommerce Quick Export package.
+msgid ""
+msgstr ""
+"Project-Id-Version: YITH WooCommerce Quick Export\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/yith-woocommerce-"
+"quick-export.premium\n"
+"POT-Creation-Date: 2021-03-05 15:25:31+00:00\n"
+"PO-Revision-Date: 2020-04-01 09:49:54+0000\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+
+#: init.php:43
+msgid ""
+"YITH WooCommerce Quick Export is enabled but not effective. It requires "
+"WooCommerce in order to work."
+msgstr ""
+"YITH WooCommerce Quick Export is ingeschakeld, maar niet effectief. Het "
+"vereist WooCommerce om volledig te werken."
+
+#: lib/class.yith-quick-export-dropbox.php:104
+msgid "Error: no Access Token."
+msgstr "Foutmelding: Geen toegang"
+
+#: lib/class.yith-quick-export-dropbox.php:133
+msgid "Error: unable to send file to Dropbox."
+msgstr "Foutmelding: Niet mogelijk om bestanden te verzenden naar dropbox"
+
+#: lib/class.yith-woocommerce-quick-export.php:199
+#: templates/admin/create-job.php:151
+msgid "Weekly"
+msgstr "Wekelijks"
+
+#: lib/class.yith-woocommerce-quick-export.php:204
+msgid "Monthly"
+msgstr "Maandelijks"
+
+#: lib/class.yith-woocommerce-quick-export.php:277
+msgid "Please enter a valid folder/path name"
+msgstr "Voer een geldige map/pad naam in"
+
+#: lib/class.yith-woocommerce-quick-export.php:284
+msgid "Starting date must be earlier than ending date"
+msgstr "De startdatum moet vóór de einddatum liggen"
+
+#: lib/class.yith-woocommerce-quick-export.php:374
+msgid "Please enter a valid schedule time."
+msgstr "Vul een geldige schema tijd in"
+
+#: lib/class.yith-woocommerce-quick-export.php:375
+msgid "Starting date must be earlier than/the same of ending date."
+msgstr "De startdatum moet liggen vóór/gelijk zijn aan de einddatum"
+
+#: lib/class.ywqe-custom-types.php:87
+msgid ""
+"Authorize this plugin to access to your Dropbox space.<br/>All <b>new "
+"documents</b> will be sent to your Dropbox space as soon as they are created."
+"<br/>Copy and paste the authorization code here, as in %sthis short guide%s."
+msgstr ""
+"Deze plugin toestaan om toegang te krijgen tot je Dropbox ruimte. <br/>Alle "
+"<b>nieuwe documenten</b> zullen worden verstuurd naar uw Dropbox ruimte "
+"zodra ze zijn aangemaakt. <br/>Kopieer en plak de verificatiecode hier, "
+"zoals uitgelegd in %sdeze korte gids%s."
+
+#: lib/class.ywqe-custom-types.php:92
+msgid "Access Token"
+msgstr "Toegang token"
+
+#: lib/class.ywqe-custom-types.php:100
+msgid "Get new Access Token"
+msgstr "Krijg nieuwe toegangs token"
+
+#: lib/class.ywqe-export-job.php:217
+msgid "Export data"
+msgstr "Exporteer data"
+
+#: lib/class.ywqe-plugin-fw-loader.php:140
+msgid "General"
+msgstr "Algemeen"
+
+#: lib/class.ywqe-plugin-fw-loader.php:141
+msgid "Data Exportation"
+msgstr "Data export"
+
+#: lib/class.ywqe-plugin-fw-loader.php:142
+msgid "Schedule history"
+msgstr "Plan geschiedenis"
+
+#: lib/class.ywqe-plugin-fw-loader.php:145
+msgid "Premium Version"
+msgstr "Premium Versie"
+
+#: lib/class.ywqe-plugin-fw-loader.php:199
+msgid ""
+"YITH WooCommerce Quick Export is available in an outstanding PREMIUM version "
+"with many new options, discover it now."
+msgstr ""
+"YITH WooCommerce Quick Export is beschikbaar in een uitstekende PREMIUM "
+"versie met vele nieuwe mogelijkheden, ontdek het nu."
+
+#: lib/class.ywqe-plugin-fw-loader.php:200
+msgid "Premium version"
+msgstr "Premium versie"
+
+#: lib/class.ywqe-plugin-fw-loader.php:207
+#: plugin-options/general-options.php:64
+msgid "YITH WooCommerce Quick Export"
+msgstr "YITH WooCommerce Quick Export"
+
+#: lib/class.ywqe-plugin-fw-loader.php:208
+msgid ""
+"In the YIT Plugins tab, you can find the YITH WooCommerce Quick Export "
+"options.<br> From this menu you can have access to all settings of the "
+"activated YITH plugins."
+msgstr ""
+"In het YIT Plugins tabblad, kunt u de YITH WooCommerce Quick Export opties "
+"vinden. <br> Vanuit dit menu heeft u toegang tot alle instellingen van de "
+"geactiveerde YITH plugins."
+
+#: plugin-options/general-options.php:17
+msgid "General Settings"
+msgstr "Algemene Instellingen"
+
+#: plugin-options/general-options.php:23
+msgid "Path format"
+msgstr "Pad formaat"
+
+#: plugin-options/general-options.php:26
+msgid ""
+"Set the path where you want to store the documents. Use {{year}}, {{month}}, "
+"{{day}} as placeholders. For example: \"Backup/{{year}}/{{month}}\" will "
+"create a paths like Backup/2015/05, Backup/2015/06 for invoices stored per "
+"year and month; alternatively, leave blank for storing files in the root "
+"folder"
+msgstr ""
+"Bepaal het pad waar u de documenten wilt bewaren. Gebruik  {{jaar}}, "
+"{{aad}}, {{dag}} als invulvelden. Voorbeeld: \"Backup/{{jaar}}/{{maand}}/"
+"{{dag}}\" ziet er als volgt uit Backup/2015/05, Backup/2015/06 voor facturen "
+"bewaard per jaar en per maand; alternatief, laat leeg om bestanden te "
+"bewaren in hoofdmap"
+
+#: plugin-options/general-options.php:34
+msgid "Filename format"
+msgstr "Formaat bestandsnaam"
+
+#: plugin-options/general-options.php:37
+msgid ""
+"Set filename format for invoice documents. Use {{year}}, {{month}}, {{day}}, "
+"{{hours}}, {{minutes}}, {{seconds}} as placeholders."
+msgstr ""
+"Bepaal bestandsnaamformaat voor facturen. Gebruik {{jaar}}, {{maand}}, "
+"{{dag}}, {{uren}}, {{minuten}}, {{seconden}} als invulvelden."
+
+#: plugin-options/general-options.php:45
+msgid "Send documents to Dropbox"
+msgstr "Stuur een document naar Dropbox"
+
+#: plugin-options/general-options.php:48
+msgid "Set automatic document backup to Dropbox."
+msgstr "Automatische document back-up naar Dropbox instellen."
+
+#: plugin-options/general-options.php:61
+msgid "Upgrade to the PREMIUM VERSION"
+msgstr "Upgraden naar PREMIUM VERSIE"
+
+#: plugin-options/general-options.php:65
+msgid "Discover The Advanced Features"
+msgstr "Ontdek de Geavanceerde Opties"
+
+#: plugin-options/general-options.php:66
+msgid ""
+"Upgrade to the PREMIUM VERSION of YITH WooCommerce Quick Export to benefit "
+"from all features!"
+msgstr ""
+"Upgraden naar PREMIUM VERSIE van YITH WooCommerce Quick Export om te "
+"profiteren van alle opties!"
+
+#: plugin-options/general-options.php:70
+msgid ""
+"See YITH WooCommerce Quick Export plugin with full premium features in action"
+msgstr ""
+"Zie de YITH WooCommerce Quick Export plugin in actie met de volledige "
+"premium opties"
+
+#: plugin-options/general-options.php:72
+msgid "Get Support and Pro Features"
+msgstr "Krijg support en Pro opties"
+
+#: plugin-options/general-options.php:73
+msgid ""
+"By purchasing the premium version of the plugin, you will take advantage of "
+"the advanced features of the product and you will get one year of free "
+"updates and support through our platform available 24h/24."
+msgstr ""
+"Door de premium versie aan te schaffen, kunt u gebruik maken van alle "
+"geavanceerde opties van het product. U krijgt een jaar lang gratis updates "
+"en support, bereikbaar via ons platform 24/7 beschikbaar."
+
+#: templates/admin/create-job.php:2
+msgid "Create new scheduled job"
+msgstr "Creer nieuwe geplande opdracht"
+
+#: templates/admin/create-job.php:12 templates/admin/create-job.php:16
+#: templates/admin/create-job.php:25 templates/admin/create-job.php:33
+#: templates/admin/create-job.php:46
+msgid "Choose data to export"
+msgstr "Kies welke data u wilt exporteren"
+
+#: templates/admin/create-job.php:20
+msgid "Orders"
+msgstr "Order"
+
+#: templates/admin/create-job.php:29
+msgid "Customers"
+msgstr "Klanten"
+
+#: templates/admin/create-job.php:37
+msgid "Coupons"
+msgstr "Kortingsbonnen"
+
+#: templates/admin/create-job.php:50
+msgid "Gift Cards"
+msgstr "Cadeaubonnen"
+
+#: templates/admin/create-job.php:57
+msgid "Order status"
+msgstr "Status bestelling"
+
+#: templates/admin/create-job.php:72
+msgid "Scheduled exportation"
+msgstr "Geplande export"
+
+#: templates/admin/create-job.php:76
+msgid "Start exportation at specific date/time"
+msgstr "Start export op een specifieke datum/tijd"
+
+#: templates/admin/create-job.php:85
+msgid "From"
+msgstr "Van"
+
+#: templates/admin/create-job.php:92
+msgid ""
+"Choose the starting date. Leave blank to start from the first item found."
+msgstr ""
+"Bepaal de startdatum. Laat leeg om te beginnen bij het eerst gevonden item."
+
+#: templates/admin/create-job.php:98
+msgid "To"
+msgstr "Tot"
+
+#: templates/admin/create-job.php:106
+msgid "Choose the ending date. Leave blank to end with the last item found."
+msgstr "Bepaal einddatum. Laat leeg om te stoppen bij laatst gevonden item."
+
+#: templates/admin/create-job.php:112
+msgid "Exportation job name"
+msgstr "Export opdrachtnaam"
+
+#: templates/admin/create-job.php:118
+msgid "Set a univocal name for this exportation job"
+msgstr "Bepaal een eenduidige naam voor deze export opdracht"
+
+#: templates/admin/create-job.php:125
+msgid "Export on"
+msgstr "Exporteren op"
+
+#: templates/admin/create-job.php:136
+msgid "Choose when the exportation should start."
+msgstr "Bepaal wanneer de export moet starten."
+
+#: templates/admin/create-job.php:142
+msgid "Recurrence"
+msgstr "Terugkeerpatroon"
+
+#: templates/admin/create-job.php:145
+msgid "None"
+msgstr "Geen"
+
+#: templates/admin/create-job.php:148
+msgid "Daily"
+msgstr "Dagelijks"
+
+#: templates/admin/create-job.php:154
+msgid "Monthly (30 days)"
+msgstr "Maandelijks (30 dagen)"
+
+#: templates/admin/create-job.php:162
+msgid "Confirm"
+msgstr "Bevestigen"
+
+#: templates/admin/create-job.php:165
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: templates/admin/exportation-history.php:5
+msgid "Processed task list"
+msgstr "Verwerkte takenlijst"
+
+#: templates/admin/exportation-history.php:11
+msgid "Select bulk action"
+msgstr "Selecteer bulkactie"
+
+#: templates/admin/exportation-history.php:13
+msgid "Bulk Actions"
+msgstr "Bulkacties"
+
+#: templates/admin/exportation-history.php:14
+msgid "Move to Bin"
+msgstr "Verplaats naar prullenbak"
+
+#: templates/admin/exportation-history.php:16
+msgid "Apply"
+msgstr "Toepassen"
+
+#: templates/admin/exportation-history.php:23 templates/admin/jobs-table.php:13
+msgid "ID"
+msgstr "ID"
+
+#: templates/admin/exportation-history.php:24 templates/admin/jobs-table.php:14
+msgid "Name"
+msgstr "Naam"
+
+#: templates/admin/exportation-history.php:25 templates/admin/jobs-table.php:15
+msgid "Exportation time"
+msgstr "Export tijd"
+
+#: templates/admin/exportation-history.php:45
+msgid "Download"
+msgstr "Download"
+
+#: templates/admin/exportation-history.php:48 templates/admin/jobs-table.php:40
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: templates/admin/jobs-table.php:6
+msgid "Scheduled task list"
+msgstr "Geplande takenlijst"
+
+#: templates/admin/jobs-table.php:8
+msgid "Add job"
+msgstr "Opdracht toevoegen"
+
+#: templates/admin/jobs-table.php:16
+msgid "Recurrency"
+msgstr "Terugkeerpatroon"
+
+#. Description of the plugin/theme
+msgid ""
+"<code><strong>YITH WooCommerce Quick Export</strong></code> allows you to "
+"export orders, customer details and coupons on the fly, or scheduling "
+"automatic backup processes and recurrences. <a href=\"https://yithemes.com/"
+"\" target=\"_blank\">Get more plugins for your e-commerce on <strong>YITH</"
+"strong></a>."
+msgstr ""
+"<code><strong>YITH WooCommerce Quick Export</strong></code> laat u "
+"bestellingen, klantdetails en coupons snel exporteren, of het inplannen van "
+"automatische back-up processen. <a href=\"https://yithemes.com/\" target="
+"\"_blank\">Verkrijg meer plugins voor uw e-commerce op <strong>YITH</"
+"strong></a>."

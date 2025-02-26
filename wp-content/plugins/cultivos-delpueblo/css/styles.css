@@ -1,0 +1,217 @@
+/* Estilos para las secciones */
+#seleccion-categorias, #listado-productos {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Ocultar la sección de productos inicialmente */
+#listado-productos {
+    opacity: 0;
+    transform: translateX(20px); /* Desplazamiento inicial */
+    pointer-events: none; /* Evitar interacción mientras está oculta */
+}
+
+/* Mostrar la sección de productos */
+#listado-productos.mostrar {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto; /* Permitir interacción */
+}
+
+/* Ocultar la sección de categorías */
+#seleccion-categorias.ocultar {
+    opacity: 0;
+    transform: translateX(-20px); /* Desplazamiento inicial */
+    pointer-events: none; /* Evitar interacción mientras está oculta */
+}
+
+
+/* Contenedor principal de la cuadrícula */
+#productos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Columnas de tamaño flexible */
+    gap: 20px; /* Espacio entre los productos */
+    padding: 20px;
+}
+
+/* Ocultar la sección de productos inicialmente */
+#productos-container.ocultar {
+    opacity: 0;
+    transform: translateX(20px);
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Mostrar la sección de productos */
+#productos-container.mostrar {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+
+/* Estilos para cada producto */
+.producto-item {
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 8px; /* Esquinas redondeadas */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    background: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición al hacer hover */
+}
+
+/* Efecto hover para resaltar el producto */
+.producto-item:hover {
+    transform: translateY(-5px); /* Levantar ligeramente el producto */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Estilos para la imagen del producto */
+.producto-item img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 200px; /* Altura fija para la imagen */
+    object-fit: cover; /* Ajustar la imagen sin distorsionar */
+    border-bottom: 1px solid #ddd; /* Borde inferior para separar la imagen del contenido */
+}
+
+/* Estilos para el título del producto */
+.producto-item h3 {
+    font-size: 1.2em;
+    margin: 15px 10px 10px;
+    color: #333; /* Color de texto oscuro */
+}
+
+/* Estilos para la descripción del producto */
+.producto-item p {
+    font-size: 0.9em;
+    margin: 0 10px 10px;
+    color: #666; /* Color de texto gris */
+}
+
+/* Estilos para el campo de cantidad */
+.producto-item input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Estilos para la fecha de envío */
+.producto-item p strong {
+    color: #333;
+}
+
+.producto-item p {
+    margin: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+
+/* Contenedor principal del selector de categorías */
+#seleccion-categorias {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario de categorías */
+#categorias-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+/* Estilos para cada categoría */
+.categoria-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para el label de la categoría */
+.categoria-item label {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para la imagen de la categoría */
+.categoria-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    filter: grayscale(100%); /* Imagen en blanco y negro por defecto */
+    transition: filter 0.3s ease; /* Transición suave al cambiar el filtro */
+}
+
+.categoria-item input[type="checkbox"]:checked + label img {
+    filter: grayscale(0%); /* Imagen en color cuando está seleccionada */
+}
+
+.categoria-item img.blanco-y-negro {
+    filter: grayscale(100%); /* Imagen en blanco y negro */
+}
+
+/* Estilos para el nombre de la categoría */
+.categoria-item span {
+    display: block;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Estilos para el checkbox */
+.categoria-item input[type="checkbox"] {
+    display: none; /* Ocultar el checkbox por defecto */
+}
+
+/* Estilos para el checkbox personalizado */
+.categoria-item input[type="checkbox"] + label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilos para el checkbox cuando está seleccionado */
+.categoria-item input[type="checkbox"]:checked + label::before {
+    background: #0073e6;
+    border-color: #0073e6;
+}
+
+/* Estilos para el botón "Siguiente" */
+#siguiente-productos {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#siguiente-productos:hover {
+    background: #005bb5;
+}

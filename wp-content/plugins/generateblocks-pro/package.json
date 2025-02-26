@@ -1,0 +1,73 @@
+{
+  "name": "generateblocks-pro",
+  "version": "2.0.0",
+  "private": true,
+  "description": "GenerateBlocks Pro adds more great features to GenerateBlocks without sacrificing usability or performance.",
+  "author": "Tom Usborne",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "editor"
+  ],
+  "homepage": "https://generateblocks.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomusborne/generateblocks-pro.git"
+  },
+  "bugs": {
+    "url": "https://generateblocks.com/support"
+  },
+  "dependencies": {
+    "@dnd-kit/sortable": "^8.0.0",
+    "@edge22/block-styles": "^1.1.39",
+    "@edge22/components": "^1.1.52",
+    "@edge22/styles-builder": "^1.2.68",
+    "@tanstack/react-query": "^5.62.11",
+    "@wordpress/icons": "9.30.0",
+    "classnames": "^2.3.1",
+    "css-color-extractor": "^1.1.4",
+    "cssbeautify": "^0.3.1",
+    "deep-object-diff": "^1.1.9",
+    "dompurify": "^2.4.0",
+    "gradient-parser": "^1.0.2",
+    "parsel-js": "^1.1.2",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-lazyload": "3.2.0",
+    "react-masonry-component": "6.3.0",
+    "react-select": "^5.4.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-use": "^17.5.1",
+    "use-debounce": "^9.0.4",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.8.0",
+    "colord": "^2.9.3",
+    "copy-webpack-plugin": "^11.0.0",
+    "eslint-import-resolver-custom-alias": "^1.3.2",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-webpack-plugin": "^4.0.1",
+    "file-saver": "^2.0.5",
+    "grunt": "^1.5.3",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-compress": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "lodash": "4.17.21",
+    "react-colorful": "^5.6.1",
+    "semver": "^7.3.8"
+  },
+  "overrides": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint:js": "wp-scripts lint-js",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "test:unit": "wp-scripts test-unit-js --passWithNoTests",
+    "package": "grunt package",
+    "action-package": "grunt action-package",
+    "clean": "git checkout -- dist/ && git clean -fd dist/"
+  }
+}

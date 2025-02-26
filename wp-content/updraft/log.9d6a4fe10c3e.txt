@@ -1,0 +1,412 @@
+0000.000 (0) Opened log file at time: Mon, 24 Feb 2025 04:57:35 +0000 on https://test.somosdelpueblo.com
+0000.001 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.25.1 WP: 6.7.2 PHP: 8.3.14 (fpm-fcgi, Linux dns111225.phdns6.es 4.18.0-513.18.1.el8_9.x86_64 #1 SMP Thu Feb 22 03:02:37 EST 2024 x86_64) MySQL: 10.11.7-MariaDB (max packet size=536870912) WPLANG: es_ES Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 33.7M | 40M) multisite: N openssl: OpenSSL 1.1.1k  FIPS 25 Mar 2021 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.002 (0) Free space on disk containing Updraft's temporary directory: 29154.8 MB
+0000.003 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.004 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.006 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1740270907, seconds_ago=102148)
+0000.007 (0) Set semaphore last lock (fd) time to 2025-02-24 04:57:35
+0000.007 (0) Semaphore lock (fd) complete
+0000.008 (0) Backup run: resumption=0, nonce=9d6a4fe10c3e, file_nonce=9d6a4fe10c3e begun at=1740373055 (0s ago), job type=backup
+0000.009 (0) Scheduling a resumption (1) after 300 seconds (1740373355) in case this run gets aborted
+0000.019 (0) PHP event: code E_WARNING: file_exists(): open_basedir restriction in effect. File(/proc/user_beancounters) is not within the allowed path(s): (/var/www/vhosts/somosdelpueblo.com/:/tmp/) (line 188, wp-content/plugins/updraftplus/backup.php)
+0000.020 (0) Checking if we have a zip executable available
+0000.021 (0) Creation of backups of directories: beginning
+0000.022 (0) No backup of plugins: excluded by user's options
+0000.022 (0) No backup of themes: excluded by user's options
+0000.022 (0) No backup of uploads: excluded by user's options
+0000.023 (0) No backup of mu-plugins: excluded by user's options
+0000.023 (0) No backup of others: excluded by user's options
+0000.024 (0) Saving backup status to database (elements: 0)
+0000.027 (0) Beginning creation of database dump (WordPress DB)
+0000.028 (0) SQL compatibility mode is: ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+0000.039 (0) Table x0fvu7_options: Total expected rows (via COUNT): 833
+0000.105 (0) Table x0fvu7_options: Rows added in this batch (next record: 6642): 829 (uncompressed bytes in this segment=2704599) in 0.07 seconds
+0000.108 (0) Table x0fvu7_options: finishing file(s) (2, 353.6 KB)
+0000.110 (0) Table x0fvu7_users: Total expected rows (via COUNT): 1
+0000.111 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.112 (0) Table x0fvu7_users: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1239) in 0.00 seconds
+0000.114 (0) Table x0fvu7_users: finishing file(s) (2, 0.6 KB)
+0000.117 (0) Table x0fvu7_usermeta: Total expected rows (via COUNT): 76
+0000.118 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.119 (0) Table x0fvu7_usermeta: Rows added in this batch (next record: 83): 76 (uncompressed bytes in this segment=7491) in 0.00 seconds
+0000.121 (0) Table x0fvu7_usermeta: finishing file(s) (2, 2.7 KB)
+0000.124 (0) Table x0fvu7_actionscheduler_actions: Total expected rows (via COUNT): 260
+0000.125 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.130 (0) Table x0fvu7_actionscheduler_actions: Rows added in this batch (next record: 390): 260 (uncompressed bytes in this segment=99280) in 0.01 seconds
+0000.133 (0) Table x0fvu7_actionscheduler_actions: finishing file(s) (2, 8.4 KB)
+0000.135 (0) Table x0fvu7_actionscheduler_claims: Total expected rows (via COUNT): 0
+0000.136 (0) Table x0fvu7_actionscheduler_claims: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=649) in 0.00 seconds
+0000.138 (0) Table x0fvu7_actionscheduler_claims: finishing file(s) (2, 0.4 KB)
+0000.140 (0) Table x0fvu7_actionscheduler_groups: Total expected rows (via COUNT): 8
+0000.141 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.142 (0) Table x0fvu7_actionscheduler_groups: Rows added in this batch (next record: 8): 8 (uncompressed bytes in this segment=889) in 0.00 seconds
+0000.143 (0) Table x0fvu7_actionscheduler_groups: finishing file(s) (2, 0.5 KB)
+0000.146 (0) Table x0fvu7_actionscheduler_logs: Total expected rows (via COUNT): 765
+0000.154 (0) Table x0fvu7_actionscheduler_logs: Rows added in this batch (next record: 1013): 765 (uncompressed bytes in this segment=67785) in 0.01 seconds
+0000.156 (0) Table x0fvu7_actionscheduler_logs: finishing file(s) (2, 7.2 KB)
+0000.159 (0) Table x0fvu7_commentmeta: Total expected rows (via COUNT): 0
+0000.160 (0) Table x0fvu7_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=658) in 0.00 seconds
+0000.162 (0) Table x0fvu7_commentmeta: finishing file(s) (2, 0.4 KB)
+0000.164 (0) Table x0fvu7_comments: Total expected rows (via COUNT): 70
+0000.164 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.166 (0) Table x0fvu7_comments: Rows added in this batch (next record: 70): 70 (uncompressed bytes in this segment=27505) in 0.00 seconds
+0000.167 (0) Table x0fvu7_comments: finishing file(s) (2, 2.9 KB)
+0000.170 (0) Table x0fvu7_links: Total expected rows (via COUNT): 0
+0000.171 (0) Table x0fvu7_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1051) in 0.00 seconds
+0000.173 (0) Table x0fvu7_links: finishing file(s) (2, 0.5 KB)
+0000.176 (0) Table x0fvu7_postmeta: Total expected rows (approximate): 1590
+0000.185 (0) Table x0fvu7_postmeta: Rows added in this batch (next record: 2326): 1602 (uncompressed bytes in this segment=219151) in 0.01 seconds
+0000.188 (0) Table x0fvu7_postmeta: finishing file(s) (2, 25.8 KB)
+0000.194 (0) Table x0fvu7_posts: Total expected rows (via COUNT): 175
+0000.195 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.203 (0) Table x0fvu7_posts: Rows added in this batch (next record: 573): 175 (uncompressed bytes in this segment=399251) in 0.01 seconds
+0000.205 (0) Table x0fvu7_posts: finishing file(s) (2, 37.2 KB)
+0000.208 (0) Table x0fvu7_term_relationships: Total expected rows (approximate): 46
+0000.209 (0) Table x0fvu7_term_relationships: Rows added in this batch (next record: 100000): 46 (uncompressed bytes in this segment=1371) in 0.00 seconds
+0000.210 (0) Table x0fvu7_term_relationships: finishing file(s) (2, 0.5 KB)
+0000.213 (0) Table x0fvu7_term_taxonomy: Total expected rows (via COUNT): 22
+0000.213 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.214 (0) Table x0fvu7_term_taxonomy: Rows added in this batch (next record: 25): 22 (uncompressed bytes in this segment=1754) in 0.00 seconds
+0000.216 (0) Table x0fvu7_term_taxonomy: finishing file(s) (2, 0.6 KB)
+0000.219 (0) Table x0fvu7_termmeta: Total expected rows (via COUNT): 14
+0000.219 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.220 (0) Table x0fvu7_termmeta: Rows added in this batch (next record: 20): 14 (uncompressed bytes in this segment=1183) in 0.00 seconds
+0000.221 (0) Table x0fvu7_termmeta: finishing file(s) (2, 0.5 KB)
+0000.223 (0) Table x0fvu7_terms: Total expected rows (via COUNT): 22
+0000.224 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.224 (0) Table x0fvu7_terms: Rows added in this batch (next record: 25): 22 (uncompressed bytes in this segment=1517) in 0.00 seconds
+0000.226 (0) Table x0fvu7_terms: finishing file(s) (2, 0.7 KB)
+0000.228 (0) Table x0fvu7_wc_category_lookup: Total expected rows (approximate): 7
+0000.229 (0) Table x0fvu7_wc_category_lookup: Rows added in this batch (next record: 1000): 7 (uncompressed bytes in this segment=683) in 0.00 seconds
+0000.230 (0) Table x0fvu7_wc_category_lookup: finishing file(s) (2, 0.4 KB)
+0000.232 (0) Table x0fvu7_wc_product_meta_lookup: Total expected rows (via COUNT): 10
+0000.233 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.234 (0) Table x0fvu7_wc_product_meta_lookup: Rows added in this batch (next record: 513): 10 (uncompressed bytes in this segment=2352) in 0.00 seconds
+0000.235 (0) Table x0fvu7_wc_product_meta_lookup: finishing file(s) (2, 0.7 KB)
+0000.237 (0) Table x0fvu7_wc_reserved_stock: Total expected rows (approximate): 0
+0000.238 (0) Table x0fvu7_wc_reserved_stock: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=687) in 0.00 seconds
+0000.239 (0) Table x0fvu7_wc_reserved_stock: finishing file(s) (2, 0.4 KB)
+0000.241 (0) Table x0fvu7_wc_tax_rate_classes: Total expected rows (via COUNT): 2
+0000.241 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.242 (0) Table x0fvu7_wc_tax_rate_classes: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=778) in 0.00 seconds
+0000.244 (0) Table x0fvu7_wc_tax_rate_classes: finishing file(s) (2, 0.4 KB)
+0000.246 (0) Table x0fvu7_woocommerce_order_itemmeta: Total expected rows (via COUNT): 138
+0000.246 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.247 (0) Table x0fvu7_woocommerce_order_itemmeta: Rows added in this batch (next record: 138): 138 (uncompressed bytes in this segment=6082) in 0.00 seconds
+0000.249 (0) Table x0fvu7_woocommerce_order_itemmeta: finishing file(s) (2, 1.3 KB)
+0000.251 (0) Table x0fvu7_woocommerce_payment_tokenmeta: Total expected rows (via COUNT): 4
+0000.251 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.252 (0) Table x0fvu7_woocommerce_payment_tokenmeta: Rows added in this batch (next record: 4): 4 (uncompressed bytes in this segment=967) in 0.00 seconds
+0000.254 (0) Table x0fvu7_woocommerce_payment_tokenmeta: finishing file(s) (2, 0.5 KB)
+0000.256 (0) Table x0fvu7_jet_fb_csrf_tokens: Total expected rows (via COUNT): 1
+0000.257 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.258 (0) Table x0fvu7_jet_fb_csrf_tokens: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=815) in 0.00 seconds
+0000.259 (0) Table x0fvu7_jet_fb_csrf_tokens: finishing file(s) (2, 0.5 KB)
+0000.262 (0) Table x0fvu7_jetpack_sync_queue: Total expected rows (via COUNT): 111
+0000.262 (0) Table is relatively small; fetch_rows will thus be: 200 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.264 (0) Table x0fvu7_jetpack_sync_queue: Rows added in this batch (next record: 1668): 111 (uncompressed bytes in this segment=123519) in 0.00 seconds
+0000.266 (0) Table x0fvu7_jetpack_sync_queue: finishing file(s) (2, 6.6 KB)
+0000.269 (0) Table x0fvu7_pmxe_exports: Total expected rows (via COUNT): 0
+0000.270 (0) Table x0fvu7_pmxe_exports: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1487) in 0.00 seconds
+0000.272 (0) Table x0fvu7_pmxe_exports: finishing file(s) (2, 0.6 KB)
+0000.278 (0) Table x0fvu7_pmxe_google_cats: Total expected rows (approximate): 5512
+0000.308 (0) Table x0fvu7_pmxe_google_cats: Rows added in this batch (next record: 505832): 5371 (uncompressed bytes in this segment=327563) in 0.03 seconds
+0000.310 (0) Table x0fvu7_pmxe_google_cats: finishing file(s) (2, 75.4 KB)
+0000.312 (0) Table x0fvu7_pmxe_posts: Total expected rows (via COUNT): 0
+0000.313 (0) Table x0fvu7_pmxe_posts: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=569) in 0.00 seconds
+0000.314 (0) Table x0fvu7_pmxe_posts: finishing file(s) (2, 0.3 KB)
+0000.317 (0) Table x0fvu7_pmxe_templates: Total expected rows (via COUNT): 0
+0000.317 (0) Table x0fvu7_pmxe_templates: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=540) in 0.00 seconds
+0000.319 (0) Table x0fvu7_pmxe_templates: finishing file(s) (2, 0.4 KB)
+0000.321 (0) Table x0fvu7_pmxi_files: Total expected rows (via COUNT): 0
+0000.322 (0) Table x0fvu7_pmxi_files: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=605) in 0.00 seconds
+0000.323 (0) Table x0fvu7_pmxi_files: finishing file(s) (2, 0.4 KB)
+0000.327 (0) Table x0fvu7_pmxi_geocoding: Total expected rows (via COUNT): 0
+0000.328 (0) Table x0fvu7_pmxi_geocoding: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=814) in 0.00 seconds
+0000.330 (0) Table x0fvu7_pmxi_geocoding: finishing file(s) (2, 0.5 KB)
+0000.332 (0) Table x0fvu7_pmxi_hash: Total expected rows (approximate): 0
+0000.333 (0) Table x0fvu7_pmxi_hash: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=546) in 0.00 seconds
+0000.334 (0) Table x0fvu7_pmxi_hash: finishing file(s) (2, 0.4 KB)
+0000.337 (0) Table x0fvu7_pmxi_history: Total expected rows (via COUNT): 0
+0000.338 (0) Table x0fvu7_pmxi_history: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=703) in 0.00 seconds
+0000.339 (0) Table x0fvu7_pmxi_history: finishing file(s) (2, 0.4 KB)
+0000.341 (0) Table x0fvu7_pmxi_images: Total expected rows (via COUNT): 0
+0000.342 (0) Table x0fvu7_pmxi_images: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=577) in 0.00 seconds
+0000.344 (0) Table x0fvu7_pmxi_images: finishing file(s) (2, 0.3 KB)
+0000.347 (0) Table x0fvu7_pmxi_imports: Total expected rows (via COUNT): 0
+0000.348 (0) Table x0fvu7_pmxi_imports: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1853) in 0.00 seconds
+0000.349 (0) Table x0fvu7_pmxi_imports: finishing file(s) (2, 0.6 KB)
+0000.352 (0) Table x0fvu7_pmxi_posts: Total expected rows (via COUNT): 0
+0000.352 (0) Table x0fvu7_pmxi_posts: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=683) in 0.00 seconds
+0000.354 (0) Table x0fvu7_pmxi_posts: finishing file(s) (2, 0.4 KB)
+0000.357 (0) Table x0fvu7_pmxi_templates: Total expected rows (via COUNT): 0
+0000.358 (0) Table x0fvu7_pmxi_templates: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=836) in 0.00 seconds
+0000.359 (0) Table x0fvu7_pmxi_templates: finishing file(s) (2, 0.4 KB)
+0000.361 (0) Table x0fvu7_wc_admin_note_actions: Total expected rows (via COUNT): 95
+0000.362 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.363 (0) Table x0fvu7_wc_admin_note_actions: Rows added in this batch (next record: 2714): 95 (uncompressed bytes in this segment=18736) in 0.00 seconds
+0000.365 (0) Table x0fvu7_wc_admin_note_actions: finishing file(s) (2, 3.2 KB)
+0000.367 (0) Table x0fvu7_wc_admin_notes: Total expected rows (via COUNT): 68
+0000.368 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.369 (0) Table x0fvu7_wc_admin_notes: Rows added in this batch (next record: 69): 68 (uncompressed bytes in this segment=32436) in 0.00 seconds
+0000.371 (0) Table x0fvu7_wc_admin_notes: finishing file(s) (2, 7.3 KB)
+0000.373 (0) Table x0fvu7_wc_customer_lookup: Total expected rows (via COUNT): 1
+0000.374 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.375 (0) Table x0fvu7_wc_customer_lookup: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1266) in 0.00 seconds
+0000.376 (0) Table x0fvu7_wc_customer_lookup: finishing file(s) (2, 0.6 KB)
+0000.379 (0) Table x0fvu7_wc_download_log: Total expected rows (via COUNT): 0
+0000.380 (0) Table x0fvu7_wc_download_log: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=740) in 0.00 seconds
+0000.382 (0) Table x0fvu7_wc_download_log: finishing file(s) (2, 0.4 KB)
+0000.384 (0) Table x0fvu7_wc_order_addresses: Total expected rows (via COUNT): 11
+0000.384 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.386 (0) Table x0fvu7_wc_order_addresses: Rows added in this batch (next record: 11): 11 (uncompressed bytes in this segment=2745) in 0.00 seconds
+0000.387 (0) Table x0fvu7_wc_order_addresses: finishing file(s) (2, 0.6 KB)
+0000.389 (0) Table x0fvu7_wc_order_coupon_lookup: Total expected rows (approximate): 0
+0000.390 (0) Table x0fvu7_wc_order_coupon_lookup: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=739) in 0.00 seconds
+0000.391 (0) Table x0fvu7_wc_order_coupon_lookup: finishing file(s) (2, 0.4 KB)
+0000.393 (0) Table x0fvu7_wc_order_operational_data: Total expected rows (via COUNT): 11
+0000.394 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.395 (0) Table x0fvu7_wc_order_operational_data: Rows added in this batch (next record: 66): 11 (uncompressed bytes in this segment=3448) in 0.00 seconds
+0000.396 (0) Table x0fvu7_wc_order_operational_data: finishing file(s) (2, 1.1 KB)
+0000.398 (0) Table x0fvu7_wc_order_product_lookup: Total expected rows (via COUNT): 10
+0000.399 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.400 (0) Table x0fvu7_wc_order_product_lookup: Rows added in this batch (next record: 11): 10 (uncompressed bytes in this segment=2086) in 0.00 seconds
+0000.401 (0) Table x0fvu7_wc_order_product_lookup: finishing file(s) (2, 0.7 KB)
+0000.403 (0) Table x0fvu7_wc_order_stats: Total expected rows (via COUNT): 10
+0000.404 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.405 (0) Table x0fvu7_wc_order_stats: Rows added in this batch (next record: 573): 10 (uncompressed bytes in this segment=2564) in 0.00 seconds
+0000.406 (0) Table x0fvu7_wc_order_stats: finishing file(s) (2, 0.8 KB)
+0000.408 (0) Table x0fvu7_wc_order_tax_lookup: Total expected rows (approximate): 0
+0000.409 (0) Table x0fvu7_wc_order_tax_lookup: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=817) in 0.00 seconds
+0000.411 (0) Table x0fvu7_wc_order_tax_lookup: finishing file(s) (2, 0.4 KB)
+0000.414 (0) Table x0fvu7_wc_orders: Total expected rows (via COUNT): 11
+0000.414 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.416 (0) Table x0fvu7_wc_orders: Rows added in this batch (next record: 573): 11 (uncompressed bytes in this segment=5476) in 0.00 seconds
+0000.418 (0) Table x0fvu7_wc_orders: finishing file(s) (2, 1.2 KB)
+0000.421 (0) Table x0fvu7_wc_orders_meta: Total expected rows (via COUNT): 289
+0000.422 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.424 (0) Table x0fvu7_wc_orders_meta: Rows added in this batch (next record: 289): 289 (uncompressed bytes in this segment=18020) in 0.00 seconds
+0000.426 (0) Table x0fvu7_wc_orders_meta: finishing file(s) (2, 3.2 KB)
+0000.430 (0) Table x0fvu7_wc_product_attributes_lookup: Total expected rows (approximate): 0
+0000.432 (0) Table x0fvu7_wc_product_attributes_lookup: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=855) in 0.00 seconds
+0000.435 (0) Table x0fvu7_wc_product_attributes_lookup: finishing file(s) (2, 0.4 KB)
+0000.439 (0) Table x0fvu7_wc_product_download_directories: Total expected rows (via COUNT): 2
+0000.439 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.440 (0) Table x0fvu7_wc_product_download_directories: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=951) in 0.00 seconds
+0000.442 (0) Table x0fvu7_wc_product_download_directories: finishing file(s) (2, 0.5 KB)
+0000.445 (0) Table x0fvu7_wc_rate_limits: Total expected rows (via COUNT): 0
+0000.446 (0) Table x0fvu7_wc_rate_limits: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=691) in 0.00 seconds
+0000.448 (0) Table x0fvu7_wc_rate_limits: finishing file(s) (2, 0.4 KB)
+0000.450 (0) Table x0fvu7_wc_webhooks: Total expected rows (via COUNT): 0
+0000.451 (0) Table x0fvu7_wc_webhooks: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1095) in 0.00 seconds
+0000.453 (0) Table x0fvu7_wc_webhooks: finishing file(s) (2, 0.5 KB)
+0000.457 (0) Table x0fvu7_woocommerce_api_keys: Total expected rows (via COUNT): 0
+0000.458 (0) Table x0fvu7_woocommerce_api_keys: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=897) in 0.00 seconds
+0000.460 (0) Table x0fvu7_woocommerce_api_keys: finishing file(s) (2, 0.4 KB)
+0000.463 (0) Table x0fvu7_woocommerce_attribute_taxonomies: Total expected rows (via COUNT): 1
+0000.464 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.464 (0) Table x0fvu7_woocommerce_attribute_taxonomies: Rows added in this batch (next record: 4): 1 (uncompressed bytes in this segment=998) in 0.00 seconds
+0000.466 (0) Table x0fvu7_woocommerce_attribute_taxonomies: finishing file(s) (2, 0.5 KB)
+0000.468 (0) Table x0fvu7_woocommerce_downloadable_product_permissions: Total expected rows (via COUNT): 0
+0000.469 (0) Table x0fvu7_woocommerce_downloadable_product_permissions: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1434) in 0.00 seconds
+0000.472 (0) Table x0fvu7_woocommerce_downloadable_product_permissions: finishing file(s) (2, 0.5 KB)
+0000.476 (0) Table x0fvu7_woocommerce_log: Total expected rows (via COUNT): 0
+0000.477 (0) Table x0fvu7_woocommerce_log: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=666) in 0.00 seconds
+0000.479 (0) Table x0fvu7_woocommerce_log: finishing file(s) (2, 0.4 KB)
+0000.481 (0) Table x0fvu7_woocommerce_order_items: Total expected rows (via COUNT): 11
+0000.481 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.482 (0) Table x0fvu7_woocommerce_order_items: Rows added in this batch (next record: 11): 11 (uncompressed bytes in this segment=1920) in 0.00 seconds
+0000.484 (0) Table x0fvu7_woocommerce_order_items: finishing file(s) (2, 0.6 KB)
+0000.486 (0) Table x0fvu7_woocommerce_payment_tokens: Total expected rows (via COUNT): 1
+0000.486 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.487 (0) Table x0fvu7_woocommerce_payment_tokens: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=913) in 0.00 seconds
+0000.488 (0) Table x0fvu7_woocommerce_payment_tokens: finishing file(s) (2, 0.5 KB)
+0000.491 (0) Table x0fvu7_woocommerce_sessions: Total expected rows (via COUNT): 1
+0000.491 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.492 (0) Table x0fvu7_woocommerce_sessions: Rows added in this batch (next record: 71): 1 (uncompressed bytes in this segment=2679) in 0.00 seconds
+0000.494 (0) Table x0fvu7_woocommerce_sessions: finishing file(s) (2, 1.1 KB)
+0000.496 (0) Table x0fvu7_woocommerce_shipping_zone_locations: Total expected rows (via COUNT): 0
+0000.496 (0) Table x0fvu7_woocommerce_shipping_zone_locations: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=828) in 0.00 seconds
+0000.498 (0) Table x0fvu7_woocommerce_shipping_zone_locations: finishing file(s) (2, 0.4 KB)
+0000.500 (0) Table x0fvu7_woocommerce_shipping_zone_methods: Total expected rows (via COUNT): 0
+0000.500 (0) Table x0fvu7_woocommerce_shipping_zone_methods: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=766) in 0.00 seconds
+0000.502 (0) Table x0fvu7_woocommerce_shipping_zone_methods: finishing file(s) (2, 0.4 KB)
+0000.504 (0) Table x0fvu7_woocommerce_shipping_zones: Total expected rows (via COUNT): 0
+0000.505 (0) Table x0fvu7_woocommerce_shipping_zones: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=626) in 0.00 seconds
+0000.507 (0) Table x0fvu7_woocommerce_shipping_zones: finishing file(s) (2, 0.4 KB)
+0000.510 (0) Table x0fvu7_woocommerce_tax_rate_locations: Total expected rows (via COUNT): 0
+0000.511 (0) Table x0fvu7_woocommerce_tax_rate_locations: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=810) in 0.00 seconds
+0000.512 (0) Table x0fvu7_woocommerce_tax_rate_locations: finishing file(s) (2, 0.4 KB)
+0000.516 (0) Table x0fvu7_woocommerce_tax_rates: Total expected rows (via COUNT): 0
+0000.516 (0) Table x0fvu7_woocommerce_tax_rates: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1166) in 0.00 seconds
+0000.518 (0) Table x0fvu7_woocommerce_tax_rates: finishing file(s) (2, 0.5 KB)
+0000.521 (0) Table x0fvu7_yith_wcan_cache: Total expected rows (via COUNT): 0
+0000.521 (0) Table x0fvu7_yith_wcan_cache: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=812) in 0.00 seconds
+0000.523 (0) Table x0fvu7_yith_wcan_cache: finishing file(s) (2, 0.4 KB)
+0000.526 (0) Table x0fvu7_yith_ywsbs_activities_log: Total expected rows (via COUNT): 0
+0000.527 (0) Table x0fvu7_yith_ywsbs_activities_log: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=726) in 0.00 seconds
+0000.530 (0) Table x0fvu7_yith_ywsbs_activities_log: finishing file(s) (2, 0.4 KB)
+0000.533 (0) Table x0fvu7_yith_ywsbs_order_lookup: Total expected rows (approximate): 0
+0000.534 (0) Table x0fvu7_yith_ywsbs_order_lookup: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=879) in 0.00 seconds
+0000.537 (0) Table x0fvu7_yith_ywsbs_order_lookup: finishing file(s) (2, 0.4 KB)
+0000.540 (0) Table x0fvu7_yith_ywsbs_revenue_lookup: Total expected rows (approximate): 0
+0000.541 (0) Table x0fvu7_yith_ywsbs_revenue_lookup: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=629) in 0.00 seconds
+0000.542 (0) Table x0fvu7_yith_ywsbs_revenue_lookup: finishing file(s) (2, 0.3 KB)
+0000.545 (0) Table x0fvu7_yith_ywsbs_stats: Total expected rows (via COUNT): 0
+0000.546 (0) Table x0fvu7_yith_ywsbs_stats: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1249) in 0.00 seconds
+0000.547 (0) Table x0fvu7_yith_ywsbs_stats: finishing file(s) (2, 0.5 KB)
+0000.547 (0) PHP event: code E_WARNING: filemtime(): stat failed for /var/www/vhosts/somosdelpueblo.com/test.somosdelpueblo.com/wp-content/updraft/backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db.gz (line 1923, wp-content/plugins/updraftplus/backup.php)
+0000.548 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_options.table.tmpr6643.gz (1/69/fopen): adding to final database dump
+0000.555 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_options.table.gz (2/69/fopen): adding to final database dump
+0000.556 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_users.table.tmpr2.gz (3/69/fopen): adding to final database dump
+0000.556 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_users.table.gz (4/69/fopen): adding to final database dump
+0000.556 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_usermeta.table.tmpr84.gz (5/69/fopen): adding to final database dump
+0000.557 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_usermeta.table.gz (6/69/fopen): adding to final database dump
+0000.557 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_actionscheduler_actions.table.tmpr391.gz (7/69/fopen): adding to final database dump
+0000.558 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_actionscheduler_actions.table.gz (8/69/fopen): adding to final database dump
+0000.558 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_actionscheduler_claims.table.tmpr0.gz (9/69/fopen): adding to final database dump
+0000.559 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_actionscheduler_claims.table.gz (10/69/fopen): adding to final database dump
+0000.559 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_actionscheduler_groups.table.tmpr9.gz (11/69/fopen): adding to final database dump
+0000.560 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_actionscheduler_groups.table.gz (12/69/fopen): adding to final database dump
+0000.560 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_actionscheduler_logs.table.tmpr1014.gz (13/69/fopen): adding to final database dump
+0000.560 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_actionscheduler_logs.table.gz (14/69/fopen): adding to final database dump
+0000.561 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_commentmeta.table.tmpr0.gz (15/69/fopen): adding to final database dump
+0000.561 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_commentmeta.table.gz (16/69/fopen): adding to final database dump
+0000.561 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_comments.table.tmpr71.gz (17/69/fopen): adding to final database dump
+0000.562 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_comments.table.gz (18/69/fopen): adding to final database dump
+0000.562 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_links.table.tmpr0.gz (19/69/fopen): adding to final database dump
+0000.563 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_links.table.gz (20/69/fopen): adding to final database dump
+0000.563 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_postmeta.table.tmpr2327.gz (21/69/fopen): adding to final database dump
+0000.564 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_postmeta.table.gz (22/69/fopen): adding to final database dump
+0000.564 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_posts.table.tmpr574.gz (23/69/fopen): adding to final database dump
+0000.565 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_posts.table.gz (24/69/fopen): adding to final database dump
+0000.566 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_term_relationships.table.tmpr100001.gz (25/69/fopen): adding to final database dump
+0000.566 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_term_relationships.table.gz (26/69/fopen): adding to final database dump
+0000.567 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_term_taxonomy.table.tmpr26.gz (27/69/fopen): adding to final database dump
+0000.567 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_term_taxonomy.table.gz (28/69/fopen): adding to final database dump
+0000.567 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_termmeta.table.tmpr21.gz (29/69/fopen): adding to final database dump
+0000.568 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_termmeta.table.gz (30/69/fopen): adding to final database dump
+0000.568 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_terms.table.tmpr26.gz (31/69/fopen): adding to final database dump
+0000.568 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_terms.table.gz (32/69/fopen): adding to final database dump
+0000.569 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_category_lookup.table.tmpr1001.gz (33/69/fopen): adding to final database dump
+0000.569 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_category_lookup.table.gz (34/69/fopen): adding to final database dump
+0000.569 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_product_meta_lookup.table.tmpr514.gz (35/69/fopen): adding to final database dump
+0000.570 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_product_meta_lookup.table.gz (36/69/fopen): adding to final database dump
+0000.570 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_reserved_stock.table.tmpr1.gz (37/69/fopen): adding to final database dump
+0000.570 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_reserved_stock.table.gz (38/69/fopen): adding to final database dump
+0000.571 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_tax_rate_classes.table.tmpr3.gz (39/69/fopen): adding to final database dump
+0000.571 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_tax_rate_classes.table.gz (40/69/fopen): adding to final database dump
+0000.571 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_order_itemmeta.table.tmpr139.gz (41/69/fopen): adding to final database dump
+0000.572 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_order_itemmeta.table.gz (42/69/fopen): adding to final database dump
+0000.572 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_payment_tokenmeta.table.tmpr5.gz (43/69/fopen): adding to final database dump
+0000.573 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_payment_tokenmeta.table.gz (44/69/fopen): adding to final database dump
+0000.573 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_jet_fb_csrf_tokens.table.tmpr2.gz (45/69/fopen): adding to final database dump
+0000.573 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_jet_fb_csrf_tokens.table.gz (46/69/fopen): adding to final database dump
+0000.573 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_jetpack_sync_queue.table.tmpr1669.gz (47/69/fopen): adding to final database dump
+0000.574 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_jetpack_sync_queue.table.gz (48/69/fopen): adding to final database dump
+0000.575 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxe_exports.table.tmpr0.gz (49/69/fopen): adding to final database dump
+0000.575 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxe_exports.table.gz (50/69/fopen): adding to final database dump
+0000.576 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxe_google_cats.table.tmpr505833.gz (51/69/fopen): adding to final database dump
+0000.577 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxe_google_cats.table.gz (52/69/fopen): adding to final database dump
+0000.578 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxe_posts.table.tmpr0.gz (53/69/fopen): adding to final database dump
+0000.579 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxe_posts.table.gz (54/69/fopen): adding to final database dump
+0000.580 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxe_templates.table.tmpr0.gz (55/69/fopen): adding to final database dump
+0000.580 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxe_templates.table.gz (56/69/fopen): adding to final database dump
+0000.581 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_files.table.tmpr0.gz (57/69/fopen): adding to final database dump
+0000.582 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_files.table.gz (58/69/fopen): adding to final database dump
+0000.582 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_geocoding.table.tmpr0.gz (59/69/fopen): adding to final database dump
+0000.583 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_geocoding.table.gz (60/69/fopen): adding to final database dump
+0000.583 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_hash.table.tmpr1.gz (61/69/fopen): adding to final database dump
+0000.584 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_hash.table.gz (62/69/fopen): adding to final database dump
+0000.584 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_history.table.tmpr0.gz (63/69/fopen): adding to final database dump
+0000.585 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_history.table.gz (64/69/fopen): adding to final database dump
+0000.585 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_images.table.tmpr0.gz (65/69/fopen): adding to final database dump
+0000.586 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_images.table.gz (66/69/fopen): adding to final database dump
+0000.586 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_imports.table.tmpr0.gz (67/69/fopen): adding to final database dump
+0000.587 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_imports.table.gz (68/69/fopen): adding to final database dump
+0000.587 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_posts.table.tmpr0.gz (69/69/fopen): adding to final database dump
+0000.587 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_posts.table.gz (70/69/fopen): adding to final database dump
+0000.588 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_templates.table.tmpr0.gz (71/69/fopen): adding to final database dump
+0000.588 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_pmxi_templates.table.gz (72/69/fopen): adding to final database dump
+0000.589 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_admin_note_actions.table.tmpr2715.gz (73/69/fopen): adding to final database dump
+0000.589 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_admin_note_actions.table.gz (74/69/fopen): adding to final database dump
+0000.589 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_admin_notes.table.tmpr70.gz (75/69/fopen): adding to final database dump
+0000.590 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_admin_notes.table.gz (76/69/fopen): adding to final database dump
+0000.590 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_customer_lookup.table.tmpr2.gz (77/69/fopen): adding to final database dump
+0000.591 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_customer_lookup.table.gz (78/69/fopen): adding to final database dump
+0000.591 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_download_log.table.tmpr0.gz (79/69/fopen): adding to final database dump
+0000.591 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_download_log.table.gz (80/69/fopen): adding to final database dump
+0000.592 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_addresses.table.tmpr12.gz (81/69/fopen): adding to final database dump
+0000.592 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_addresses.table.gz (82/69/fopen): adding to final database dump
+0000.592 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_coupon_lookup.table.tmpr1.gz (83/69/fopen): adding to final database dump
+0000.593 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_coupon_lookup.table.gz (84/69/fopen): adding to final database dump
+0000.593 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_operational_data.table.tmpr67.gz (85/69/fopen): adding to final database dump
+0000.593 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_operational_data.table.gz (86/69/fopen): adding to final database dump
+0000.594 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_product_lookup.table.tmpr12.gz (87/69/fopen): adding to final database dump
+0000.594 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_product_lookup.table.gz (88/69/fopen): adding to final database dump
+0000.594 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_stats.table.tmpr574.gz (89/69/fopen): adding to final database dump
+0000.595 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_stats.table.gz (90/69/fopen): adding to final database dump
+0000.595 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_tax_lookup.table.tmpr1.gz (91/69/fopen): adding to final database dump
+0000.595 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_order_tax_lookup.table.gz (92/69/fopen): adding to final database dump
+0000.596 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_orders.table.tmpr574.gz (93/69/fopen): adding to final database dump
+0000.596 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_orders.table.gz (94/69/fopen): adding to final database dump
+0000.596 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_orders_meta.table.tmpr290.gz (95/69/fopen): adding to final database dump
+0000.597 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_orders_meta.table.gz (96/69/fopen): adding to final database dump
+0000.597 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_product_attributes_lookup.table.tmpr1.gz (97/69/fopen): adding to final database dump
+0000.598 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_product_attributes_lookup.table.gz (98/69/fopen): adding to final database dump
+0000.598 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_product_download_directories.table.tmpr3.gz (99/69/fopen): adding to final database dump
+0000.599 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_product_download_directories.table.gz (100/69/fopen): adding to final database dump
+0000.599 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_rate_limits.table.tmpr0.gz (101/69/fopen): adding to final database dump
+0000.599 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_rate_limits.table.gz (102/69/fopen): adding to final database dump
+0000.600 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_webhooks.table.tmpr0.gz (103/69/fopen): adding to final database dump
+0000.600 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_wc_webhooks.table.gz (104/69/fopen): adding to final database dump
+0000.600 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_api_keys.table.tmpr0.gz (105/69/fopen): adding to final database dump
+0000.601 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_api_keys.table.gz (106/69/fopen): adding to final database dump
+0000.601 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_attribute_taxonomies.table.tmpr5.gz (107/69/fopen): adding to final database dump
+0000.601 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_attribute_taxonomies.table.gz (108/69/fopen): adding to final database dump
+0000.602 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_downloadable_product_permissions.table.tmpr0.gz (109/69/fopen): adding to final database dump
+0000.602 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_downloadable_product_permissions.table.gz (110/69/fopen): adding to final database dump
+0000.602 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_log.table.tmpr0.gz (111/69/fopen): adding to final database dump
+0000.603 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_log.table.gz (112/69/fopen): adding to final database dump
+0000.603 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_order_items.table.tmpr12.gz (113/69/fopen): adding to final database dump
+0000.603 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_order_items.table.gz (114/69/fopen): adding to final database dump
+0000.604 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_payment_tokens.table.tmpr2.gz (115/69/fopen): adding to final database dump
+0000.604 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_payment_tokens.table.gz (116/69/fopen): adding to final database dump
+0000.604 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_sessions.table.tmpr72.gz (117/69/fopen): adding to final database dump
+0000.605 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_sessions.table.gz (118/69/fopen): adding to final database dump
+0000.605 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_shipping_zone_locations.table.tmpr0.gz (119/69/fopen): adding to final database dump
+0000.605 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_shipping_zone_locations.table.gz (120/69/fopen): adding to final database dump
+0000.605 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_shipping_zone_methods.table.tmpr0.gz (121/69/fopen): adding to final database dump
+0000.606 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_shipping_zone_methods.table.gz (122/69/fopen): adding to final database dump
+0000.606 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_shipping_zones.table.tmpr0.gz (123/69/fopen): adding to final database dump
+0000.607 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_shipping_zones.table.gz (124/69/fopen): adding to final database dump
+0000.607 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_tax_rate_locations.table.tmpr0.gz (125/69/fopen): adding to final database dump
+0000.607 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_tax_rate_locations.table.gz (126/69/fopen): adding to final database dump
+0000.608 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_tax_rates.table.tmpr0.gz (127/69/fopen): adding to final database dump
+0000.608 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_woocommerce_tax_rates.table.gz (128/69/fopen): adding to final database dump
+0000.608 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_yith_wcan_cache.table.tmpr0.gz (129/69/fopen): adding to final database dump
+0000.609 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_yith_wcan_cache.table.gz (130/69/fopen): adding to final database dump
+0000.609 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_yith_ywsbs_activities_log.table.tmpr0.gz (131/69/fopen): adding to final database dump
+0000.609 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_yith_ywsbs_activities_log.table.gz (132/69/fopen): adding to final database dump
+0000.610 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_yith_ywsbs_order_lookup.table.tmpr1.gz (133/69/fopen): adding to final database dump
+0000.610 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_yith_ywsbs_order_lookup.table.gz (134/69/fopen): adding to final database dump
+0000.610 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_yith_ywsbs_revenue_lookup.table.tmpr1.gz (135/69/fopen): adding to final database dump
+0000.611 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_yith_ywsbs_revenue_lookup.table.gz (136/69/fopen): adding to final database dump
+0000.611 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_yith_ywsbs_stats.table.tmpr0.gz (137/69/fopen): adding to final database dump
+0000.611 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db-table-x0fvu7_yith_ywsbs_stats.table.gz (138/69/fopen): adding to final database dump
+0000.614 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db.gz: finished writing out complete database file (561.9 KB)
+0000.627 (0) Total database tables backed up: 69 (backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db.gz, size: 575555, sha1: 2ca86b492a6fa848740625c50d3e808e53269f1d, sha256: fea5addb54654bca7bde69225aca40cd94db83a4ad5f59754de44c7e2099283b)
+0000.630 (0) backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db.gz: db: This file has not yet been successfully uploaded: will queue
+0000.630 (0) Saving backup history. Total backup size: 562.1 KB
+0000.631 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0000.632 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0000.632 (0) No remote despatch: user chose no remote backup service
+0000.632 (0) Recording as successfully uploaded: backup_2025-02-24-0557_DelPueblo_9d6a4fe10c3e-db.gz
+0000.633 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0000.633 (0) Resume backup (9d6a4fe10c3e, 0): finish run
+0000.634 (0) Decremented the semaphore (fd) by 1
+0000.635 (0) Semaphore (fd) unlocked
+0000.635 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0000.636 (0) The backup succeeded and is now complete
+0000.636 (0) No email will/can be sent - the user has not configured an email address.
+0000.637 (0) La copia de seguridad se ha realizado correctamente y se ha completado

@@ -1,0 +1,1 @@
+<?php return array('dependencies' => array('react', 'wp-block-editor', 'wp-blocks', 'wp-components', 'wp-compose', 'wp-data', 'wp-element', 'wp-hooks', 'generateblocks-pro-block-styles', 'generateblocks-pro-styles-builder'), 'version' => '51c1cc37c2c013ba9f56');
