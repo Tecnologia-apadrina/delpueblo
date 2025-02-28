@@ -108,9 +108,12 @@
 }
 
 
-
 /* Contenedor principal del selector de categorías */
 #seleccion-categorias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
     background: #f9f9f9;
     border-radius: 8px;
@@ -119,6 +122,8 @@
 
 /* Formulario de categorías */
 #categorias-form {
+    width: 100%;
+    max-width: 800px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 15px;
@@ -214,4 +219,41 @@
 
 #siguiente-productos:hover {
     background: #005bb5;
+}
+
+
+/* VIsta móvil*/
+
+@media(min-width: 769px) {
+    .inside-header>.site-branding,
+    .inside-header>.navigation-branding,
+    .inside-header>.site-logo,
+    .site-branding-container,
+    #site-navigation .navigation-branding .site-logo,
+    #sticky-navigation .navigation-branding {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
+
+    #site-navigation {
+        margin-left: unset !important;
+        display: flex;
+    }
+
+    .site-header .main-navigation:not(#sticky-navigation) .inside-navigation {
+        margin: unset;
+    }
+
+    #site-navigation,
+    #primary-menu,
+    .main-navigation .inside-navigation {
+        flex: 1;
+    }
+
+    /* Change nth-child(#) to first item to right */
+    .main-navigation ul li:nth-child(3) {
+        margin-left: auto;
+    }
 }

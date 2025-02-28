@@ -27,8 +27,8 @@ function mostrar_categorias_productos() {
                     $imagen_url = wp_get_attachment_url($imagen_id);
                     ?>
                     <div class="categoria-item">
-                        <label>
-                            <input type="checkbox" name="categorias[]" value="<?php echo $categoria->term_id; ?>">
+                        <input type="checkbox" name="categorias[]" value="<?php echo $categoria->term_id; ?>" id="categoria-<?php echo $categoria->term_id; ?>">
+                        <label for="categoria-<?php echo $categoria->term_id; ?>">
                             <?php if ($imagen_url) : ?>
                                 <img src="<?php echo $imagen_url; ?>" alt="<?php echo $categoria->name; ?>">
                             <?php endif; ?>
