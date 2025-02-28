@@ -57,6 +57,9 @@
     background: #fff; /* Fondo blanco */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición al hacer hover */
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Efecto hover para resaltar el producto */
@@ -87,6 +90,12 @@
     color: #666; /* Color de texto gris */
 }
 
+/* Estilos para el precio del producto */
+.precio-producto {
+    font-size: 1.1em;
+    color: #e74c3c; /* Color rojo para el precio */
+    margin: 10px 0;
+}
 /* Estilos para el campo de cantidad */
 .producto-item input[type="number"] {
     width: 80px;
@@ -95,6 +104,33 @@
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
+/* Estilos para la fecha de preorden */
+.wpro-date-label {
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Estilos para el botón Quick View */
+.producto-item .button.yith-wcqv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.producto-item .button.yith-wcqv-button:hover {
+    background: #005bb5;
+}
+
 
 /* Estilos para la fecha de envío */
 .producto-item p strong {
@@ -107,9 +143,54 @@
     color: #555;
 }
 
+/* Estilos para el stock del producto */
+.stock-producto {
+    font-size: 0.9em;
+    color: #27ae60; /* Color verde para el stock */
+    margin: 10px 0;
+}
+
+/* Estilos para la barra de stock */
+.stock-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.stock-bar-fill {
+    height: 10px;
+    background-color: #27ae60; /* Color verde para la barra de stock */
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+/* Estilos para las pre-ventas del producto */
+.pre-ventas {
+    font-size: 0.9em;
+    color: #e74c3c; /* Color rojo para las pre-ventas */
+    margin: 10px 0;
+}
+
+/* Estilos para la barra de pre-ventas */
+.pre-ventas-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.pre-ventas-bar-fill {
+    height: 10px;
+    background-color: #e74c3c; /* Color rojo para la barra de pre-ventas */
+    width: 0;
+    transition: width 0.3s ease;
+}
 
 /* Contenedor principal del selector de categorías */
-#seleccion-categorias {
+#seleccion-categorias, #listado-productos {
     display: flex;
     flex-direction: column;
     align-items: center;
