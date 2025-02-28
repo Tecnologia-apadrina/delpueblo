@@ -150,6 +150,13 @@
     margin: 10px 0;
 }
 
+/* Estilos para el stock cultivo del producto */
+.acf-stock-cultivo {
+    font-size: 0.9em;
+    color: #3498db; /* Color azul para el stock cultivo */
+    margin: 10px 0;
+}
+
 /* Estilos para la barra de stock */
 .stock-bar {
     width: 100%;
@@ -300,6 +307,17 @@
 
 #siguiente-productos:hover {
     background: #005bb5;
+}
+
+/* Contenedor principal con flexbox */
+#mi-plugin-woocommerce {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Clase para invertir el orden de los elementos */
+#mi-plugin-woocommerce.invertir-orden {
+    flex-direction: column-reverse;
 }
 
 

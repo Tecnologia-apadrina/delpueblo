@@ -50,6 +50,10 @@ jQuery(document).ready(function($) {
                         $('#listado-productos').addClass('mostrar');
                         console.log('Clase "mostrar" añadida a #listado-productos'); // Depuración
                     }, 500); // Esperar 500ms para que la animación de ocultar termine
+                    
+                    // Invertir el orden de los divs
+                    $('#mi-plugin-woocommerce').addClass('invertir-orden');
+
                 }
             });
         } else {
@@ -71,6 +75,9 @@ jQuery(document).ready(function($) {
 
         // Desmarcar todos los checkboxes
         $('input[name="categorias[]"]').prop('checked', false);
+
+        // Invertir el orden de los divs
+        $('#mi-plugin-woocommerce').removeClass('invertir-orden');
 
     });
 
