@@ -113,11 +113,10 @@ function obtener_productos_por_categorias() {
                     <h3><?php echo get_the_title(); ?></h3>
                     <p><?php echo $producto->get_short_description(); ?></p>
                     <p class="precio-producto"><?php echo $producto->get_price_html(); ?></p> <!-- Precio del producto -->
-                    <p class="stock-producto">Stock ACF: <?php echo $producto->get_stock_quantity(); ?></p> <!-- Stock del producto -->
-                    <p class="acf-stock-cultivo">Stock restante: <?php echo get_field('stock-cultivo', get_the_ID()); ?></p> <!-- Stock Cultivo del producto -->
-                    <div class="stock-bar">
+                    <p class="acf-stock-cultivo">Plantación estimada: <?php echo get_field('stock-cultivo', get_the_ID()); ?></p> <!-- Stock Cultivo del producto -->
+                    <!--<div class="stock-bar">
                         <div class="stock-bar-fill" style="width: <?php echo ($producto->get_stock_quantity() / 1000) * 100; ?>%;"></div>
-                    </div>
+                    </div>-->
                     <p class="pre-ventas">Pre-ventas hechas: <?php echo 1000 - $producto->get_stock_quantity(); ?></p> <!-- Pre-ventas del producto -->
                     <div class="pre-ventas-bar">
                         <div class="pre-ventas-bar-fill" style="width: <?php echo ((1000 - $producto->get_stock_quantity()) / 1000) * 100; ?>%;"></div>
@@ -126,8 +125,6 @@ function obtener_productos_por_categorias() {
                     <?php if ($wpro_date_label): ?>
                         <strong><p class="wpro-date-label"><?php echo esc_html($wpro_date_label); ?></p></strong>
                     <?php endif; ?>
-                    <!-- Mostrar la fecha de preorden -->
-                    <a href="#" class="button yith-wcqv-button" data-product_id="<?php echo get_the_ID(); ?>">Mas info del producto</a>
                     <!-- Botón de Quick View -->
                     <button class="quick-view-btn" data-product-id="<?php echo get_the_ID(); ?>">Mi Quick View</button>
                 </div>

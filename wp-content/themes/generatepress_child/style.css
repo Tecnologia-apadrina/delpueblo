@@ -8,3 +8,34 @@
  Version:      0.1
 */
 
+.cultivo-progress {
+    margin-bottom: 20px;
+}
+
+.total-bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.ventas-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #4CAF50; /* Verde para ventas hechas */
+    z-index: 1;
+}
+
+.comprado-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #2196F3; /* Azul para cantidad comprada */
+    z-index: 2;
+}
+
