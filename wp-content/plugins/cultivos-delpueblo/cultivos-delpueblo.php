@@ -128,6 +128,15 @@ function obtener_productos_por_categorias() {
                     <?php endif; ?>
                     <!-- Mostrar la fecha de preorden -->
                     <a href="#" class="button yith-wcqv-button" data-product_id="<?php echo get_the_ID(); ?>">Mas info del producto</a>
+                    <!-- Botón de Quick View -->
+                    <button class="quick-view-btn" data-product-id="<?php echo get_the_ID(); ?>">Mi Quick View</button>
+                </div>
+                <!-- Popup de Quick View -->
+                <div id="quick-view-popup">
+                    <div class="quick-view-content">
+                        <span class="close-btn">&times;</span> 
+                        <div id="quick-view-product-info"></div> 
+                    </div>
                 </div>
                 <?php
             }
@@ -138,6 +147,59 @@ function obtener_productos_por_categorias() {
         wp_die();
     }
 }
+
+/** Quick view */
+
+function obtener_info_producto() {
+    if (isset($_POST['product_id'])) {
+        $product_id = intval($_POST['product_id']);
+        $producto = wc_get_product($product_id);
+
+        if ($producto) {
+            // Generar el contenido del popup
+            ?>
+            <div id="quick-view-product" class="quick-view-product">
+                <div class="product-images">
+                    <img src="<?php echo wp_get_attachment_url($producto->get_image_id()); ?>" alt="<?php echo $producto->get_name(); ?>">
+                    <?php
+                    $attachment_ids = $producto->get_gallery_image_ids();
+                    //echo $attachment_ids;
+                    error_log(print_r($attachment_ids, true)); // Depuración: Ver los IDs de las imágenes de la galería
+                    if ($attachment_ids && has_post_thumbnail()) {
+                        
+                        echo '<div class="product-gallery">';
+                        foreach ($attachment_ids as $attachment_id) {
+                            echo '<img src="' . wp_get_attachment_url($attachment_id) . '" alt="' . $producto->get_name() . '">';
+                        }
+                        echo '</div>';
+                    }
+                    ?>
+                </div>
+                <div class="product-details">
+                    <h3><?php echo $producto->get_name(); ?></h3>
+                    <p class="precio-producto"><?php echo $producto->get_price_html(); ?></p>
+                    <?php if ($producto->get_stock_status() === 'instock'): ?>
+                        <p class="stock-disponible">Disponible</p>
+                    <?php else: ?>
+                        <p class="stock-agotado">Agotado</p>
+                    <?php endif; ?>
+                    <div class="pre-ventas-bar">
+                        <div class="pre-ventas-bar-fill" style="width: <?php echo ((1000 - $producto->get_stock_quantity()) / 1000) * 100; ?>%;"></div>
+                    </div>
+                    <p><?php echo $producto->get_short_description(); ?></p>
+                    <input type="number" name="cantidad[<?php echo $product_id; ?>]" min="0" value="0">
+                </div>
+            </div>
+            <?php
+        }
+        wp_die();
+    }
+}
+
+add_action('wp_ajax_obtener_info_producto', 'obtener_info_producto');
+add_action('wp_ajax_nopriv_obtener_info_producto', 'obtener_info_producto');
+
+/* Fin quick view*/
 
 add_action('wp_ajax_obtener_productos', 'obtener_productos_por_categorias');
 add_action('wp_ajax_nopriv_obtener_productos', 'obtener_productos_por_categorias');

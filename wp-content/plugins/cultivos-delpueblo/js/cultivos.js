@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
             return this.value;
         }).get();
 
-        console.log('Categorías seleccionadas:', categorias); // Depuración
+        //console.log('Categorías seleccionadas:', categorias); // Depuración
 
         if (categorias.length > 0) {
             $.ajax({
@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
                 },
                 success: function(response) {
                     
-                    console.log('Respuesta AJAX:', response); // Depuración
+                    //console.log('Respuesta AJAX:', response); // Depuración
 
                     // Eliminar la clase "ocultar" y añadir la clase "mostrar"
                     $('#productos-container')
@@ -43,12 +43,12 @@ jQuery(document).ready(function($) {
                     $('#seleccion-categorias').addClass('ocultar');
 
                     // Depuración: Verificar que se llega al setTimeout
-                    console.log('Antes del setTimeout'); // Depuración
+                    //console.log('Antes del setTimeout'); // Depuración
 
                     // Mostrar la sección de productos con transición
                     setTimeout(function() {
                         $('#listado-productos').addClass('mostrar');
-                        console.log('Clase "mostrar" añadida a #listado-productos'); // Depuración
+                        //console.log('Clase "mostrar" añadida a #listado-productos'); // Depuración
                     }, 500); // Esperar 500ms para que la animación de ocultar termine
                     
                     // Invertir el orden de los divs
@@ -109,6 +109,37 @@ jQuery(document).ready(function($) {
             });
         } else {
             alert('Por favor, selecciona al menos un producto.');
+        }
+    });
+
+    // Abrir el popup al hacer clic en el botón "Quick View"
+    //$('.quick-view-btn').on('click', function() {
+    $(document).on('click', '.quick-view-btn', function() {
+        var productId = $(this).data('product-id'); // Obtener el ID del producto
+        //console.log('Botón ID "Quick View" clicado, ID del producto:', productId); // Depuración
+        
+        $('#quick-view-popup').fadeIn(); // Mostrar el popup
+
+        // Cargar la información del producto mediante AJAX
+        $.ajax({
+            url: ajax_url,
+            type: 'POST',
+            data: {
+                action: 'obtener_info_producto',
+                product_id: productId
+            },
+            success: function(response) {
+                //console.log('Respuesta AJAX obtener_info_producto:', response); // Depuración
+                $('#quick-view-product-info').html(response); // Mostrar la información en el popup
+            }
+        });
+    });
+
+    // Cerrar el popup al hacer clic en el botón de cerrar o fuera del popup
+    //$('.close-btn, #quick-view-popup').on('click', function(e) {
+    $(document).on('click', '.close-btn, #quick-view-popup', function(e) {
+        if (e.target === this) {
+            $('#quick-view-popup').fadeOut(); // Ocultar el popup
         }
     });
 });
