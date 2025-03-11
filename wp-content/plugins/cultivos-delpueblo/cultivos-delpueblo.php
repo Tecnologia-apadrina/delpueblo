@@ -56,6 +56,48 @@ function mostrar_categorias_productos() {
 add_shortcode('mostrar_categorias', 'mostrar_categorias_productos');
 
 
+function mostrar_thank_you() {
+    // Verifica si WooCommerce está activo y si hay un pedido reciente
+    if ( ! function_exists( 'wc_get_order' ) ) {
+        return;
+    }
+
+    // Obtén el último pedido del usuario actual
+    $order_id = wc_get_order_id_by_order_key( $_GET['key'] );
+    $order = wc_get_order( $order_id );
+
+    // Verifica si el pedido existe
+    if ( ! $order ) {
+        return;
+    }
+
+    // Itera sobre los items del pedido
+    foreach ( $order->get_items() as $item_id => $item ) {
+        $product_id = $item->get_product_id();
+        $stock_cultivo = get_field( 'stock-cultivo', $product_id );
+        $cantidad_comprada = $item->get_quantity();
+
+        if ( $stock_cultivo ) {
+            $ventas_hechas = $stock_cultivo - $cantidad_comprada;
+            $porcentaje_ventas = ($ventas_hechas / $stock_cultivo) * 100;
+            $porcentaje_comprado = ($cantidad_comprada / $stock_cultivo) * 100;
+            ?>
+            <div class="cultivo-progress">
+                <p><?php echo $item->get_name(); ?></p>
+                <div class="total-bar">
+                    <div class="ventas-bar" style="width: <?php echo $porcentaje_ventas; ?>%;"></div>
+                    <div class="comprado-bar" style="width: <?php echo $porcentaje_comprado; ?>%;"></div>
+                </div>
+                <p>Ventas Hechas: <?php echo $ventas_hechas; ?> / <?php echo $stock_cultivo; ?></p>
+            </div>
+            <?php
+        }
+    }
+
+}
+
+
+add_shortcode('mostrar_thank_you', 'mostrar_thank_you');
 
 function obtener_productos_por_categorias() {
     if (isset($_POST['categorias'])) {
