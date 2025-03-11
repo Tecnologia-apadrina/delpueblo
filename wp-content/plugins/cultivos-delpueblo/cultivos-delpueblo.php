@@ -45,8 +45,10 @@ function mostrar_categorias_productos() {
         <!-- Segunda sección: Listado de productos -->
         <div id="listado-productos">
             <div id="productos-container"></div>
+            <div class="botones-container"> 
             <button type="button" id="volver-categorias">Volver</button>
             <button type="button" id="siguiente-checkout">Siguiente</button>
+            </div>
         </div>
     </div>
     <?php

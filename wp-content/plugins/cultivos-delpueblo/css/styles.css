@@ -27,12 +27,15 @@
 
 /* Contenedor principal de la cuadrícula */
 #productos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Columnas de tamaño flexible */
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px; /* Espacio entre los productos */
     padding: 20px;
     position: relative;
+    justify-content: center;
 }
+
+
 
 /* Ocultar la sección de productos inicialmente */
 #productos-container.ocultar {
@@ -52,6 +55,8 @@
 
 /* Estilos para cada producto */
 .producto-item {
+    flex: 1 1 calc(25% - 20px); /* Ajustar el tamaño de los productos */
+    max-width: calc(25% - 20px); /* Asegurar que no se exceda el tamaño máximo */
     border: 1px solid #ddd; /* Borde sutil */
     border-radius: 8px; /* Esquinas redondeadas */
     overflow: hidden; /* Evita que el contenido se desborde */
