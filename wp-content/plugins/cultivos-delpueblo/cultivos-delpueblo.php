@@ -14,7 +14,7 @@ function mostrar_categorias_productos() {
     ob_start();
     ?>
     <div id="mi-plugin-woocommerce">
-         <div id="seleccion-categorias">
+        <div id="seleccion-categorias">
             <form id="categorias-form">
                 <?php
                 $categorias = get_terms(array(
@@ -39,16 +39,18 @@ function mostrar_categorias_productos() {
                 }
                 ?>
             </form>
-            <button type="button" id="siguiente-productos">Siguiente</button>
+            <!--<button type="button" id="siguiente-productos">Siguiente</button>-->
         </div>
         
         <!-- Segunda sección: Listado de productos -->
         <div id="listado-productos">
             <div id="productos-container"></div>
-            <div class="botones-container"> 
+        </div>
+
+        <!-- Botones de navegación -->
+        <div class="botones-container"> 
             <button type="button" id="volver-categorias">Volver</button>
-            <button type="button" id="siguiente-checkout">Siguiente</button>
-            </div>
+            <button type="button" id="siguiente-productos">Siguiente</button>
         </div>
     </div>
     <?php
@@ -165,12 +167,16 @@ function obtener_productos_por_categorias() {
                     <div class="pre-ventas-bar">
                         <div class="pre-ventas-bar-fill" style="width: <?php echo ((1000 - $producto->get_stock_quantity()) / 1000) * 100; ?>%;"></div>
                     </div>
-                    <input type="number" name="cantidad[<?php echo get_the_ID(); ?>]" min="0" value="0">
+                    <div class="cantidad-container">
+                        <button type="button" class="cantidad-menos" data-product-id="<?php echo get_the_ID(); ?>">-</button>
+                        <input type="number" name="cantidad[<?php echo get_the_ID(); ?>]" min="0" value="0">
+                        <button type="button" class="cantidad-mas" data-product-id="<?php echo get_the_ID(); ?>">+</button>
+                    </div>
                     <?php if ($wpro_date_label): ?>
                         <strong><p class="wpro-date-label"><?php echo esc_html($wpro_date_label); ?></p></strong>
                     <?php endif; ?>
                     <!-- Botón de Quick View -->
-                    <button class="quick-view-btn" data-product-id="<?php echo get_the_ID(); ?>">Mi Quick View</button>
+                    <a href="javascript:void(0);" class="quick-view-btn" data-product-id="<?php echo get_the_ID(); ?>">+ INFO</a>
                 </div>
                 <!-- Popup de Quick View -->
                 <div id="quick-view-popup">
@@ -228,7 +234,6 @@ function obtener_info_producto() {
                         <div class="pre-ventas-bar-fill" style="width: <?php echo ((1000 - $producto->get_stock_quantity()) / 1000) * 100; ?>%;"></div>
                     </div>
                     <p><?php echo $producto->get_short_description(); ?></p>
-                    <input type="number" name="cantidad[<?php echo $product_id; ?>]" min="0" value="0">
                 </div>
             </div>
             <?php
