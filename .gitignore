@@ -9,7 +9,7 @@
 /wp-content/index.php
 /wp-content/languages
 /wp-content/plugins/index.php
-/wp-content/plugins/
+/wp-content/plugins
 /wp-content/updraft/
 /wp-content/themes/index.php
 /wp-includes/
@@ -36,6 +36,9 @@ wp-config.php
 
 # htaccess
 /.htaccess
+
+# Incluir una subcarpeta específica dentro de plugins
+!/wp-content/plugins/cultivos-delpueblo
 
 # All plugins
 #
