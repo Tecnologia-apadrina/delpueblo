@@ -38,6 +38,13 @@ class Mailchimp_WooCommerce_Tagging {
     private $list_id;
 
     /**
+     * Mailchimp Datacenter.
+     *
+     * @var string
+     */
+    private $datacenter;
+
+    /**
      * Constructor.
      */
     public function __construct() {
@@ -49,6 +56,11 @@ class Mailchimp_WooCommerce_Tagging {
         // Load settings.
         $this->api_key = get_option( 'mailchimp_api_key' );
         $this->list_id = get_option( 'mailchimp_list_id' );
+
+        // Extract datacenter from API key
+        if ( ! empty( $this->api_key ) ) {
+            list( , $this->datacenter ) = explode( '-', $this->api_key );
+        }
 
         // Schedule cron job
         add_action( 'wp', array( $this, 'schedule_cron_job' ) );
@@ -112,6 +124,12 @@ class Mailchimp_WooCommerce_Tagging {
                     echo '<div class="notice notice-error is-dismissible"><p>Mailchimp connection test failed: ' . esc_html( $result ) . '</p></div>';
                 }
             }
+            if ( isset( $_GET['mailchimp_manual_sync_result'] ) && $_GET['mailchimp_manual_sync_result'] == 'success' ) {
+                echo '<div class="notice notice-success is-dismissible"><p>Mailchimp manual sync successful!</p></div>';
+            }
+            if ( isset( $_GET['mailchimp_manual_sync_result'] ) && $_GET['mailchimp_manual_sync_result'] != 'success' ) {
+                echo '<div class="notice notice-error is-dismissible"><p>Mailchimp manual sync failedddd: ' . esc_html( $_GET['mailchimp_manual_sync_result'] ) . '</p></div>';
+            }
             ?>
             <form method="post" action="options.php">
                 <?php
@@ -156,7 +174,8 @@ class Mailchimp_WooCommerce_Tagging {
                 exit;
             }
 
-            $endpoint = "https://us1.api.mailchimp.com/3.0/lists/" . $list_id;
+            list( , $datacenter ) = explode( '-', $api_key );
+            $endpoint = "https://{$datacenter}.api.mailchimp.com/3.0/lists/" . $list_id;
 
             $args = array(
                 'headers' => array(
@@ -231,7 +250,7 @@ class Mailchimp_WooCommerce_Tagging {
         }
 
         $member_hash = md5( strtolower( $email_address ) );
-        $endpoint    = "https://us1.api.mailchimp.com/3.0/lists/{$this->list_id}/members/{$member_hash}/tags";
+        $endpoint    = "https://{$this->datacenter}.api.mailchimp.com/3.0/lists/{$this->list_id}/members/{$member_hash}/tags";
 
         $args = array(
             'headers' => array(
@@ -259,9 +278,9 @@ class Mailchimp_WooCommerce_Tagging {
             $data = json_decode( $body );
 
             if ( wp_remote_retrieve_response_code( $response ) >= 300 ) {
-                error_log( 'Mailchimp API Error: ' . print_r( $data, true ) );
+            error_log( 'Mailchimp API Error: ' . print_r( $data, true ) . ' | Endpoint: ' . $endpoint . ' | Args: ' . print_r( $args, true ) );
             } else {
-                error_log( "Successfully added tag '{$tag_name}' to {$email_address}." );
+            error_log( "Successfully added tag '{$tag_name}' to {$email_address}." );
             }
         }
     }

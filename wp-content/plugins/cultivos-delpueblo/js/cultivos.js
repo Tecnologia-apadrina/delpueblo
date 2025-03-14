@@ -24,34 +24,70 @@ jQuery(document).ready(function($) {
 
         if (categorias.length > 0) {
             $.ajax({
-                url: ajax_url, // Usar la variable pasada desde PHP
-                type: 'POST',
-                data: {
-                    action: 'obtener_productos',
-                    categorias: categorias
-                },
-                success: function(response) {
-                    console.log("Respuesta del servidor:", response);
+            url: ajax_url, // Usar la variable pasada desde PHP
+            type: 'POST',
+            data: {
+                action: 'obtener_productos',
+                categorias: categorias
+            },
+            success: function(response) {
+                //console.log("Respuesta del servidor:", response);
 
-                    $('#productos-container')
-                        .removeClass('ocultar') // Eliminar la clase "ocultar"
-                        .html(response) // Actualizar el contenido
-                        .addClass('mostrar'); // Añadir la clase "mostrar"
+                $('#productos-container')
+                .removeClass('ocultar') // Eliminar la clase "ocultar"
+                .html(response) // Actualizar el contenido
+                .addClass('mostrar'); // Añadir la clase "mostrar"
 
-                    // Ocultar la sección de categorías con transición
-                    $('#seleccion-categorias').addClass('ocultar');
+                // Ocultar la sección de categorías con transición
+                $('#seleccion-categorias').addClass('ocultar');
 
-                    // Mostrar la sección de productos con transición
-                    setTimeout(function() {
-                        $('#listado-productos').addClass('mostrar');
-                    }, 500); // Esperar 500ms para que la animación de ocultar termine
+                // Mostrar la sección de productos con transición
+                setTimeout(function() {
+                $('#listado-productos').addClass('mostrar');
+                $('#listado-productos').removeClass('ocultar');
+                }, 500); // Esperar 500ms para que la animación de ocultar termine
 
-                    // Invertir el orden de los divs
-                    //$('#mi-plugin-woocommerce').addClass('invertir-orden');
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error en la solicitud AJAX:", status, error);
+                // Ocultar las secciones especificadas con un efecto de desvanecimiento
+                $('.page-hero,#amamos-vegetales, #porque-conservamos, #fondo-puerro, #cultivos-salvan').fadeOut(500);
+
+                // Invertir el orden de los divs
+                //$('#mi-plugin-woocommerce').addClass('invertir-orden');
+
+                // Verificar si hay productos seleccionados con cantidad > 0
+                $('#siguiente-productos').on('click', function() {
+                var cantidades = {};
+
+                // Recorrer todos los inputs de cantidad
+                $('input[name^="cantidad"]').each(function() {
+                    var producto_id = $(this).attr('name').match(/\[(.*?)\]/)[1]; // Extraer el ID del producto
+                    var cantidad = $(this).val(); // Obtener la cantidad
+
+                    if (cantidad > 0) {
+                    cantidades[producto_id] = cantidad; // Guardar la cantidad si es mayor que 0
+                    }
+                });
+
+                if (Object.keys(cantidades).length > 0) {
+                    $.ajax({
+                    url: ajax_url,
+                    type: 'POST',
+                    data: {
+                        action: 'agregar_al_carrito',
+                        cantidades: cantidades
+                    },
+                    success: function(response) {
+                        console.log("Respuesta del servidor:", response); // Log the response
+                        window.location.href = checkout_url; // Redirigir al checkout
+                    }
+                    });
+                } else {
+                    alert('Por favor, selecciona al menos un producto.');
                 }
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("Error en la solicitud AJAX:", status, error);
+            }
             });
         } else {
             alert('Por favor, selecciona al menos una categoría.');
@@ -76,6 +112,9 @@ jQuery(document).ready(function($) {
 
         // Invertir el orden de los divs
         $('#mi-plugin-woocommerce').removeClass('invertir-orden');
+
+        // Mostrar las secciones especificadas con un efecto de desvanecimiento
+        $('#amamos-vegetales, #porque-conservamos, #fondo-puerro, #cultivos-salvan').fadeIn(500);
     });
 
     // Redirigir al formulario de envío
@@ -150,4 +189,29 @@ jQuery(document).ready(function($) {
         var currentValue = parseInt(input.val());
         input.val(currentValue + 1);
     });
+
+    // Función para cargar productos
+    function cargarProductos(categorias) {
+        $.ajax({
+            url: ajax_url,
+            type: 'POST',
+            data: {
+                action: 'obtener_productos',
+                categorias: categorias
+            },
+            success: function(response) {
+                console.log("Respuesta del servidor:", response);
+                $('#productos-container').html(response);
+                $('#listado-productos').addClass('mostrar');
+                $('#volver-categorias').show(); // Mostrar el botón Volver
+
+                // Ocultar las secciones especificadas con un efecto de desvanecimiento
+                $('#amamos-vegetales, #porque-conservamos, #fondo-puerro, #cultivos-salvan').fadeOut(500);
+            },
+            error: function(xhr, status, error) {
+                console.error("Error en la solicitud AJAX:", status, error);
+            }
+        });
+    }
+
 });
