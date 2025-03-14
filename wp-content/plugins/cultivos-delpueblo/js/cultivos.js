@@ -14,12 +14,13 @@ jQuery(document).ready(function($) {
 
     // Ejemplo de uso en una solicitud AJAX
     $('#siguiente-productos').on('click', function() {
+        console.log("Botón 'siguiente-productos' clickeado");
 
         var categorias = $('input[name="categorias[]"]:checked').map(function() {
             return this.value;
         }).get();
 
-        //console.log('Categorías seleccionadas:', categorias); // Depuración
+        console.log("Categorías seleccionadas:", categorias);
 
         if (categorias.length > 0) {
             $.ajax({
@@ -30,10 +31,8 @@ jQuery(document).ready(function($) {
                     categorias: categorias
                 },
                 success: function(response) {
-                    
-                    //console.log('Respuesta AJAX:', response); // Depuración
+                    console.log("Respuesta del servidor:", response);
 
-                    // Eliminar la clase "ocultar" y añadir la clase "mostrar"
                     $('#productos-container')
                         .removeClass('ocultar') // Eliminar la clase "ocultar"
                         .html(response) // Actualizar el contenido
@@ -42,18 +41,16 @@ jQuery(document).ready(function($) {
                     // Ocultar la sección de categorías con transición
                     $('#seleccion-categorias').addClass('ocultar');
 
-                    // Depuración: Verificar que se llega al setTimeout
-                    //console.log('Antes del setTimeout'); // Depuración
-
                     // Mostrar la sección de productos con transición
                     setTimeout(function() {
                         $('#listado-productos').addClass('mostrar');
-                        //console.log('Clase "mostrar" añadida a #listado-productos'); // Depuración
                     }, 500); // Esperar 500ms para que la animación de ocultar termine
-                    
-                    // Invertir el orden de los divs
-                    $('#mi-plugin-woocommerce').addClass('invertir-orden');
 
+                    // Invertir el orden de los divs
+                    //$('#mi-plugin-woocommerce').addClass('invertir-orden');
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error en la solicitud AJAX:", status, error);
                 }
             });
         } else {
@@ -67,6 +64,7 @@ jQuery(document).ready(function($) {
         $('#listado-productos').removeClass('mostrar');
         $('#productos-container').removeClass('mostrar');
         $('#productos-container').addClass('ocultar');
+        $('#listado-productos').addClass('ocultar');
 
         // Mostrar la sección de categorías con transición
         setTimeout(function() {
@@ -78,7 +76,6 @@ jQuery(document).ready(function($) {
 
         // Invertir el orden de los divs
         $('#mi-plugin-woocommerce').removeClass('invertir-orden');
-
     });
 
     // Redirigir al formulario de envío
@@ -113,11 +110,8 @@ jQuery(document).ready(function($) {
     });
 
     // Abrir el popup al hacer clic en el botón "Quick View"
-    //$('.quick-view-btn').on('click', function() {
     $(document).on('click', '.quick-view-btn', function() {
         var productId = $(this).data('product-id'); // Obtener el ID del producto
-        //console.log('Botón ID "Quick View" clicado, ID del producto:', productId); // Depuración
-        
         $('#quick-view-popup').fadeIn(); // Mostrar el popup
 
         // Cargar la información del producto mediante AJAX
@@ -129,17 +123,31 @@ jQuery(document).ready(function($) {
                 product_id: productId
             },
             success: function(response) {
-                //console.log('Respuesta AJAX obtener_info_producto:', response); // Depuración
                 $('#quick-view-product-info').html(response); // Mostrar la información en el popup
             }
         });
     });
 
     // Cerrar el popup al hacer clic en el botón de cerrar o fuera del popup
-    //$('.close-btn, #quick-view-popup').on('click', function(e) {
     $(document).on('click', '.close-btn, #quick-view-popup', function(e) {
         if (e.target === this) {
             $('#quick-view-popup').fadeOut(); // Ocultar el popup
         }
+    });
+
+    // Manejar el evento de clic en el botón cantidad-menos
+    $(document).on('click', '.cantidad-menos', function() {
+        var input = $(this).next('input[type="number"]');
+        var currentValue = parseInt(input.val());
+        if (currentValue > 0) {
+            input.val(currentValue - 1);
+        }
+    });
+
+    // Manejar el evento de clic en el botón cantidad-mas
+    $(document).on('click', '.cantidad-mas', function() {
+        var input = $(this).prev('input[type="number"]');
+        var currentValue = parseInt(input.val());
+        input.val(currentValue + 1);
     });
 });

@@ -18,28 +18,23 @@
 }
 
 /* Ocultar la sección de categorías */
-#seleccion-categorias.ocultar {
+#seleccion-categorias.ocultar,#listado-productos.ocultar  {
     opacity: 0;
     transform: translateX(-20px); /* Desplazamiento inicial */
     pointer-events: none; /* Evitar interacción mientras está oculta */
+    display: none; /* Ocultar completamente */
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 
 /* Contenedor principal de la cuadrícula */
 #productos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Columnas de tamaño flexible */
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px; /* Espacio entre los productos */
     padding: 20px;
     position: relative;
-}
-
-/* Ocultar la sección de productos inicialmente */
-#productos-container.ocultar {
-    opacity: 0;
-    transform: translateX(20px);
-    pointer-events: none;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    justify-content: space-around;
 }
 
 /* Mostrar la sección de productos */
@@ -52,6 +47,8 @@
 
 /* Estilos para cada producto */
 .producto-item {
+    flex: 1 1 calc(33.33% - 20px); /* Ajustar el tamaño de los productos */
+    max-width: calc(33.33% - 20px); /* Asegurar que no se exceda el tamaño máximo */
     border: 1px solid #ddd; /* Borde sutil */
     border-radius: 8px; /* Esquinas redondeadas */
     overflow: hidden; /* Evita que el contenido se desborde */
@@ -72,8 +69,8 @@
 /* Estilos para la imagen del producto */
 .producto-item img {
     width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-    height: 200px; /* Altura fija para la imagen */
-    object-fit: cover; /* Ajustar la imagen sin distorsionar */
+    height: 350px; /* Altura fija para la imagen */
+    object-fit: contain; /* Ajustar la imagen sin distorsionar */
     border-bottom: 1px solid #ddd; /* Borde inferior para separar la imagen del contenido */
 }
 
@@ -197,6 +194,64 @@
     transition: width 0.3s ease;
 }
 
+/* Estilos para el contenedor de cantidad */
+.cantidad-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Estilos para los botones de cantidad */
+.cantidad-container button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.cantidad-container button:hover {
+    background-color: #005bb5;
+}
+
+/* Estilos para el campo de entrada de cantidad */
+.cantidad-container input[type="number"] {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0 5px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+/* Estilos para el contenedor de botones */
+.botones-container {
+    display: flex;
+    justify-content: center; /* Centrar los botones */
+    margin-top: 20px;
+}
+
+/* Estilos para los botones de navegación */
+.botones-container button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.botones-container button:hover {
+    background-color: #005bb5;
+}
+
 /* Contenedor principal del selector de categorías */
 #seleccion-categorias, #listado-productos {
     display: flex;
@@ -204,17 +259,17 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: #f9f9f9;
+   /* background: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
 }
 
 /* Formulario de categorías */
 #categorias-form {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px; /* Aumentar el ancho máximo */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* Mantener 4 elementos por fila */
     gap: 15px;
 }
 
@@ -225,6 +280,9 @@
     overflow: hidden;
     background: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .categoria-item:hover {
@@ -238,15 +296,17 @@
     cursor: pointer;
     text-align: center;
     padding: 10px;
+    font-size: 1.1em;
+    color: #333;
 }
 
 /* Estilos para la imagen de la categoría */
 .categoria-item img {
     width: 100%;
-    height: 100px;
+    height: 150px;
     object-fit: cover;
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     filter: grayscale(100%); /* Imagen en blanco y negro por defecto */
     transition: filter 0.3s ease; /* Transición suave al cambiar el filtro */
 }
@@ -262,8 +322,9 @@
 /* Estilos para el nombre de la categoría */
 .categoria-item span {
     display: block;
-    font-size: 0.9em;
+    font-size: 1.5em;
     color: #333;
+    margin-top: 10px;
 }
 
 /* Estilos para el checkbox */
@@ -292,12 +353,31 @@
 }
 
 /* Estilos para el botón "Siguiente" */
-#siguiente-productos {
+#siguiente-productos,#volver-categorias {
     display: block;
-    width: 100%;
+    width: 120px;
     padding: 10px;
     margin-top: 20px;
-    background: #0073e6;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+.botones-container {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.botones-container button {
+    display: block;
+    width: 120px;
+    padding: 10px;
+    background: #e74c3c;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -323,21 +403,22 @@
 
 
 /* Quick view */
-/* Estilos para el botón de Quick View */
+/* Estilos para el enlace de Quick View */
 .quick-view-btn {
-    display: block;
+    display: inline-block;
     margin: 10px auto;
-    padding: 10px 20px;
-    background: #0073e6;
-    color: #fff;
+    padding: 0;
+    background: none;
+    color: inherit; /* Usar el color de texto por defecto */
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    text-decoration: underline;
+    text-underline-offset: 4px; /* Separar el subrayado del texto */
+    transition: color 0.3s ease;
 }
 
 .quick-view-btn:hover {
-    background: #005bb5;
+    color: inherit; /* Mantener el color de texto por defecto */
 }
 
 /* Estilos para el popup */
@@ -367,11 +448,13 @@
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    max-width: 600px;
+    max-width: 800px;
     width: 90%;
     position: relative;
-    margin-top: 20%;
-    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .close-btn {
