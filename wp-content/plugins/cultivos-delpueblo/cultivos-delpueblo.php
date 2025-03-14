@@ -63,7 +63,7 @@ function mostrar_thank_you() {
     }
 
     // Obtén el último pedido del usuario actual
-    $order_id = wc_get_order_id_by_order_key( $_GET['key'] );
+    $order_id = isset($_GET['key']) ? wc_get_order_id_by_order_key($_GET['key']) : 0;
     $order = wc_get_order( $order_id );
 
     // Verifica si el pedido existe
@@ -74,8 +74,11 @@ function mostrar_thank_you() {
     // Itera sobre los items del pedido
     foreach ( $order->get_items() as $item_id => $item ) {
         $product_id = $item->get_product_id();
+        $product = wc_get_product($product_id);
         $stock_cultivo = get_field( 'stock-cultivo', $product_id );
         $cantidad_comprada = $item->get_quantity();
+        $categorias = wp_get_post_terms($product_id, 'product_cat');
+        $imagen_url = wp_get_attachment_url($product->get_image_id());
 
         if ( $stock_cultivo ) {
             $ventas_hechas = $stock_cultivo - $cantidad_comprada;
@@ -84,6 +87,16 @@ function mostrar_thank_you() {
             ?>
             <div class="cultivo-progress">
                 <p><?php echo $item->get_name(); ?></p>
+                <?php if ($imagen_url) : ?>
+                    <img src="<?php echo $imagen_url; ?>" alt="<?php echo $item->get_name(); ?>" class="thumbnail">
+                <?php endif; ?>
+                <p>Categoría: 
+                    <?php 
+                    foreach ($categorias as $categoria) {
+                        echo $categoria->name . ' '; 
+                    }
+                    ?>
+                </p>
                 <div class="total-bar">
                     <div class="ventas-bar" style="width: <?php echo $porcentaje_ventas; ?>%;"></div>
                     <div class="comprado-bar" style="width: <?php echo $porcentaje_comprado; ?>%;"></div>
@@ -93,7 +106,6 @@ function mostrar_thank_you() {
             <?php
         }
     }
-
 }
 
 
